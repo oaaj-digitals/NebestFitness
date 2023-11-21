@@ -99,8 +99,8 @@ const Header = () => {
 				>
 					<path
 						opacity="0.4"
-						fill-rule="evenodd"
-						clip-rule="evenodd"
+						fillRule="evenodd"
+						clipRule="evenodd"
 						d="M821.032 1080H0V477.18L821.032 1080ZM1156.01 1080L0 223.72V0H717.859L1920 934.316V1080H1156.01ZM1054.92 0H1920V660.59L1054.92 0Z"
 						fill="url(#pattern0)"
 					/>
@@ -124,21 +124,6 @@ const Header = () => {
 						/>
 					</defs>
 				</BgImage>
-
-				{/* <BgCover
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1920 1080"
-					fill="none"
-				>
-					<g style={{ mixBlendMode: "overlay", opacity: "0.2" }}>
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M717.859 0L0 0V223.72L1156.01 1080H1920V934.316L717.859 0ZM1054.92 0H1920V660.591L1054.92 0ZM821.032 1080L0 477.181V1080H821.032Z"
-							fill="#E32226"
-						/>
-					</g>
-				</BgCover> */}
 			</HeaderBg>
 
 			<HeaderContent>
