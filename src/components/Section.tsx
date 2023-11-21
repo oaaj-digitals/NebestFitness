@@ -13,14 +13,14 @@ interface Props {
 const SectionBox = s.section<{
 	height?: string;
 	scrollSnapAlign?: boolean;
-	padding?: string;
+	$padding?: string;
 }>`
     width: 100%;
 	height: ${(props) => (props.height ? props.height : "100vh")};
 	max-height: max-content;
 	scroll-snap-align: ${(props) =>
 		props.scrollSnapAlign === false ? "none" : "start"};
-    padding: ${(props) => (props.padding ? props.padding : "4rem 6rem")};
+    padding: ${(props) => (props.$padding ? props.$padding : "4rem 6rem")};
     display:flex;
     flex-direction:column;
     
@@ -32,14 +32,14 @@ const SectionTitleBox = s.div`
 `;
 
 const SectionTitle = s.h2`
-    font: var(--secondary-heading-font);
-    color: var(--color-black);
+    font: var(--secondary-heading);
+    color: var(--color-white);
     line-height: .9;
 `;
 
 const SectionMain = s.div`
     width:100%;
-	min-height: 100%;
+	height: 100%;
 
     display: flex;
     justify-content: space-evenly;
@@ -60,9 +60,9 @@ const Section = ({
 			id={id}
 			height={height}
 			scrollSnapAlign={snapScroll}
-			padding={padding}
+			$padding={padding}
 		>
-			{title ? (
+			{title != null || "" ? (
 				<SectionTitleBox>
 					<SectionTitle>{title}</SectionTitle>
 					<div className="underline"></div>

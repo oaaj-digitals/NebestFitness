@@ -19,14 +19,17 @@ const HeaderBox = s.header`
 `;
 
 const HeaderBg = s.div`
-	width: 100%;
+	flex-shrink: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     overflow: hidden;
 `;
 
 const BgImage = s.svg`
-	width: 100%;
-	height: 100%;
-    opacity: 0.4;
+	height: 120%;
+    opacity: 0.3;
 `;
 
 const HeaderContent = s.div`
@@ -98,7 +101,7 @@ const Header = () => {
 					fill="none"
 				>
 					<path
-						opacity="0.4"
+						opacity="0.5"
 						fillRule="evenodd"
 						clipRule="evenodd"
 						d="M821.032 1080H0V477.18L821.032 1080ZM1156.01 1080L0 223.72V0H717.859L1920 934.316V1080H1156.01ZM1054.92 0H1920V660.59L1054.92 0Z"

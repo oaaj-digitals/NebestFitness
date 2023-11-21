@@ -8,12 +8,22 @@ import { useEffect, useState } from "react";
 const AboutBg = s.div`
     width: 100%;
     height: 100%;
-    
     position: absolute;
     top: 0;
     left: 0;
-
-    // background: radial-gradient(circle at 50% 50%, var(--color-gray), var(--color-black) 60%);
+    background: radial-gradient(circle at 50% 50%, var(--color-gray), var(--color-black) 40%);
+	overflow: hidden;
+	
+    & > div {
+		width: 200%;
+		height: 57%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) rotate(31deg);
+		background: var(--color-gray);
+		opacity: .4;
+	}
 `;
 
 const VideoBox = s.div`
@@ -64,7 +74,7 @@ const VideoCover = s.div`
     
     & > img {
         display: inline-block;
-        height: 5%; 
+        height: 6rem; 
         position: absolute;
         top: 50%;
         left: 50%;
@@ -103,6 +113,10 @@ const About = () => {
 	) as HTMLVideoElement;
 
 	const handlePlaying = () => {
+		const videoPlayer = document.getElementById(
+			"about-video"
+		) as HTMLVideoElement;
+		videoPlayer.volume = 0.1;
 		setIsPlaying(!isPlaying);
 	};
 
@@ -113,7 +127,7 @@ const About = () => {
 
 	useEffect(() => {
 		setIsPlaying(false);
-		videoPlayer ? (videoPlayer.volume = 0.01) : null;
+		videoPlayer ? (videoPlayer.volume = 0.1) : null;
 	}, []);
 
 	useEffect(() => {
@@ -125,22 +139,7 @@ const About = () => {
 	return (
 		<Section id="about-us" padding="0">
 			<AboutBg>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="100%"
-					// height="1521"
-					viewBox="0 0 1920 1521"
-					fill="none"
-				>
-					<g style={{ mixBlendMode: "luminosity" }} opacity="0.1">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M0 0V94.0684L1921 1521V853.224L826.278 0H0Z"
-							fill="#E32226"
-						/>
-					</g>
-				</svg>
+				<div></div>
 			</AboutBg>
 			<VideoBox className={isPlaying ? "isPlaying" : ""}>
 				<video
