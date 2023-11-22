@@ -8,21 +8,26 @@ interface Props {
 	height?: string;
 	padding?: string;
 	snapScroll?: boolean;
+	flexDirection?: string;
 }
 
-const SectionBox = s.section<{
+interface StyledComponentProps {
 	height?: string;
 	scrollSnapAlign?: boolean;
 	$padding?: string;
-}>`
+	flexDirection?: string;
+}
+
+const SectionBox = s.section<StyledComponentProps>`
     width: 100%;
-	height: ${(props) => (props.height ? props.height : "100vh")};
+	height: ${({ height }: StyledComponentProps) => (height ? height : "100vh")};
 	max-height: max-content;
-	scroll-snap-align: ${(props) =>
-		props.scrollSnapAlign === false ? "none" : "start"};
-    padding: ${(props) => (props.$padding ? props.$padding : "4rem 6rem")};
+	scroll-snap-align: ${({ scrollSnapAlign }: StyledComponentProps) =>
+		scrollSnapAlign === false ? "none" : "start"};
+    padding: ${({ $padding }: StyledComponentProps) =>
+		$padding ? $padding : "4rem 6rem"};
     display:flex;
-    flex-direction:column;
+    flex-direction: column;
     
 `;
 
@@ -37,13 +42,15 @@ const SectionTitle = s.h2`
     line-height: .9;
 `;
 
-const SectionMain = s.div`
+const SectionMain = s.div<StyledComponentProps>`
     width:100%;
 	height: 100%;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+	flex-direction: ${({ flexDirection }: StyledComponentProps) =>
+		flexDirection !== "" || null ? flexDirection : "row"};
 
 `;
 
@@ -54,6 +61,7 @@ const Section = ({
 	height,
 	padding,
 	snapScroll,
+	flexDirection,
 }: Props) => {
 	return (
 		<SectionBox
@@ -69,7 +77,7 @@ const Section = ({
 				</SectionTitleBox>
 			) : null}
 
-			<SectionMain>{children}</SectionMain>
+			<SectionMain flexDirection={flexDirection}>{children}</SectionMain>
 		</SectionBox>
 	);
 };
