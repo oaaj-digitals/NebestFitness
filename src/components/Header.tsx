@@ -93,7 +93,7 @@ const SocialMediaBox = s.div`
 
 const Header = () => {
 	return (
-		<HeaderBox>
+		<HeaderBox id="header">
 			<HeaderBg>
 				<BgImage
 					xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ const Header = () => {
 				<HeaderTop>
 					<Logo src={FullLogo} />
 					<NavBar>
-						<a href="/">Home</a>
+						<a href="/#header">Home</a>
 						<a href="/#about-us">About Us</a>
 						<a href="/#services">Services</a>
 						<a href="/#gallery">Gallery</a>
