@@ -38,7 +38,7 @@ const TestimonialCard = s.div`
 const Testimonials = () => {
 	return (
 		<Section
-			height="80vh"
+			height="75vh"
 			title="Members Success Stories"
 			id="testimonials"
 		>
