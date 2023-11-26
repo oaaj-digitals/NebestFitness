@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Blog from "./components/Blog";
 import Contact from "./components/ContactUs";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
@@ -14,6 +15,7 @@ function App() {
 			<About />
 			<Services />
 			<Gallery />
+			<Blog />
 			<Testimonials />
 			<Contact />
 			<Footer />
