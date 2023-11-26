@@ -17,6 +17,7 @@ const FooterBox = s.footer`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items:center;
+	border-top: 1px solid #f5f5f555;
 `;
 
 const Logo = s.img`

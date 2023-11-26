@@ -2,7 +2,7 @@ import { styled as s } from "styled-components";
 import Section from "./Section";
 import gItem1 from "../assets/videos/GVTS-1.mp4";
 import gItem2 from "../assets/images/Image-1.png";
-import gItem3 from "../assets/images/IMG_1377.jpg";
+import gItem3 from "../assets/images/IMG_1421.jpg";
 import gItem4 from "../assets/videos/GVTS-2.mp4";
 import gItem5 from "../assets/images/IMG_1058.jpg";
 import gItem6 from "../assets/videos/GVTS-3.mp4";

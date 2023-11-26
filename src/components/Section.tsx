@@ -7,7 +7,6 @@ interface Props {
 	children: ReactNode;
 	height?: string;
 	padding?: string;
-	snapScroll?: boolean;
 	flexDirection?: string;
 }
 
@@ -22,8 +21,6 @@ const SectionBox = s.section<StyledComponentProps>`
     width: 100%;
 	height: ${({ height }: StyledComponentProps) => (height ? height : "100vh")};
 	max-height: max-content;
-	scroll-snap-align: ${({ scrollSnapAlign }: StyledComponentProps) =>
-		scrollSnapAlign === false ? "none" : "start"};
     padding: ${({ $padding }: StyledComponentProps) =>
 		$padding ? $padding : "4rem 6rem"};
     display:flex;
@@ -60,16 +57,10 @@ const Section = ({
 	children,
 	height,
 	padding,
-	snapScroll,
 	flexDirection,
 }: Props) => {
 	return (
-		<SectionBox
-			id={id}
-			height={height}
-			scrollSnapAlign={snapScroll}
-			$padding={padding}
-		>
+		<SectionBox id={id} height={height} $padding={padding}>
 			{title != null || "" ? (
 				<SectionTitleBox>
 					<SectionTitle>{title}</SectionTitle>

@@ -7,50 +7,20 @@ import {
 	faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import FullLogo from "../assets/images/nebest-full-logo.svg";
-import BgImg from "../assets/images/danielle-cerullo-CQfNt66ttZM-unsplash.jpg";
+import BgImg from "../assets/images/headerBgImg.svg";
 
 const HeaderBox = s.header`
 	width: 100%;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding-top: 8rem;
 	overflow: hidden;
-`;
-
-const HeaderBg = s.div`
-	flex-shrink: 0;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    overflow: hidden;
-`;
-
-const BgImage = s.svg`
-	height: 120%;
-    opacity: 0.3;
-`;
-
-const HeaderContent = s.div`
-	width: 100%;
-	height: 100%;
-	padding-bottom: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
 	
-	& > *:not(:first-child) {
-		margin: 0 6.5rem;
-	}
+	background-image: url(${BgImg});
+	background-size: cover;
+	background-position: center;
 `;
 
 const HeaderTop = s.div`
-	flex-shrink: 0;
 	width: 100%;
 	height: max-content;
 	padding: 2rem 3rem;
@@ -58,7 +28,11 @@ const HeaderTop = s.div`
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--color-black);
-	z-index: 100;
+	z-index: 30;
+
+	position: fixed;
+	left: 0;
+	top: 0;
 `;
 
 const Logo = s.img`
@@ -73,6 +47,11 @@ const NavBar = s.nav`
 `;
 
 const HeaderMain = s.div`
+	position: absolute;
+	top: calc(50% + 4rem);
+	left: 10rem;
+	transform: translateY(-50%);
+
 	width: 60rem;
 	display: flex;
 	flex-direction: column;
@@ -86,94 +65,58 @@ const Title = s.h1`
 `;
 
 const SocialMediaBox = s.div`
+	position: absolute;
+	bottom: 3rem;
+	right: 10rem;
+
 	display: flex;
-	gap: 3rem;
+	gap: 4rem;
 	align-self: flex-end;
 `;
 
 const Header = () => {
 	return (
 		<HeaderBox id="header">
-			<HeaderBg>
-				<BgImage
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1920 1080"
-					fill="none"
+			<HeaderTop>
+				<Logo src={FullLogo} />
+				<NavBar>
+					<a href="/#header">Home</a>
+					<a href="/#about-us">About Us</a>
+					<a href="/#services">Services</a>
+					<a href="/#gallery">Gallery</a>
+					<a href="/#testimonials">Testimonials</a>
+					<a href="/#contact-us">Contact Us</a>
+					<a href="/#blog">Blog</a>
+				</NavBar>
+			</HeaderTop>
+
+			<HeaderMain>
+				<Title>Unleash Your Full Potential</Title>
+				<div className="underline"></div>
+				<p>
+					Welcome to NebestFitness, Your destination for
+					transformative fitness experience. Embark on a journey of
+					welness and strength with us.
+				</p>
+			</HeaderMain>
+
+			<SocialMediaBox>
+				<a href="https://instagram.com/nebestfitness" target="_blank">
+					<FontAwesomeIcon icon={faInstagram} size="2x" />
+				</a>
+				<a href="https://x.com/nebestfitness" target="_blank">
+					<FontAwesomeIcon icon={faXTwitter} size="2x" />
+				</a>
+				<a
+					href="https://facebook.com/profile.php?id=100078758541400"
+					target="_blank"
 				>
-					<path
-						opacity="0.5"
-						fillRule="evenodd"
-						clipRule="evenodd"
-						d="M821.032 1080H0V477.18L821.032 1080ZM1156.01 1080L0 223.72V0H717.859L1920 934.316V1080H1156.01ZM1054.92 0H1920V660.59L1054.92 0Z"
-						fill="url(#pattern0)"
-					/>
-					<defs>
-						<pattern
-							id="pattern0"
-							patternContentUnits="objectBoundingBox"
-							width="1"
-							height="1"
-						>
-							<use
-								href="#image0_302_59"
-								transform="matrix(0.000244141 0 0 0.000434028 0 -0.0926649)"
-							/>
-						</pattern>
-						<image
-							id="image0_302_59"
-							width="4096"
-							height="2731"
-							href={BgImg}
-						/>
-					</defs>
-				</BgImage>
-			</HeaderBg>
-
-			<HeaderContent>
-				<HeaderTop>
-					<Logo src={FullLogo} />
-					<NavBar>
-						<a href="/#header">Home</a>
-						<a href="/#about-us">About Us</a>
-						<a href="/#services">Services</a>
-						<a href="/#gallery">Gallery</a>
-						<a href="/#testimonials">Testimonials</a>
-						<a href="/#contact-us">Contact Us</a>
-						<a href="/#blog">Blog</a>
-					</NavBar>
-				</HeaderTop>
-
-				<HeaderMain>
-					<Title>Unleash Your Full Potential</Title>
-					<div className="underline"></div>
-					<p>
-						Welcome to NebestFitness, Your destination for
-						transformative fitness experience. Embark on a journey
-						of welness and strength with us.
-					</p>
-				</HeaderMain>
-
-				<SocialMediaBox>
-					<a
-						href="https://instagram.com/nebestfitness"
-						target="_blank"
-					>
-						<FontAwesomeIcon icon={faInstagram} size="2x" />
-					</a>
-					<a href="https://x.com/nebestfitness" target="_blank">
-						<FontAwesomeIcon icon={faXTwitter} size="2x" />
-					</a>
-					<a
-						href="https://facebook.com/profile.php?id=100078758541400"
-						target="_blank"
-					>
-						<FontAwesomeIcon icon={faFacebookF} size="2x" />
-					</a>
-					<a href="https://tiktok.com/@nebestfitness" target="_blank">
-						<FontAwesomeIcon icon={faTiktok} size="2x" />
-					</a>
-				</SocialMediaBox>
-			</HeaderContent>
+					<FontAwesomeIcon icon={faFacebookF} size="2x" />
+				</a>
+				<a href="https://tiktok.com/@nebestfitness" target="_blank">
+					<FontAwesomeIcon icon={faTiktok} size="2x" />
+				</a>
+			</SocialMediaBox>
 		</HeaderBox>
 	);
 };

@@ -33,7 +33,7 @@ const Contact = () => {
 			<ContactInfo>
 				<InfoBox>
 					<p>
-						<span>Phone:</span> 07xxx xxxxxx{" "}
+						<span>Phone:</span> 07501 080466
 					</p>
 					<p>
 						<span>Email:</span> NebestFitness@gmail.com

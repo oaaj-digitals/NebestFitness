@@ -1,6 +1,6 @@
 import { styled as s } from "styled-components";
 import Section from "./Section";
-import aboutImage from "../assets/images/IMG_1421.jpg";
+import aboutImage from "../assets/images/IMG_1377.jpg";
 
 const AboutBg = s.div`
     width: 100%;
@@ -12,12 +12,12 @@ const AboutBg = s.div`
 	overflow: hidden;
 	
     & > div {
-		width: 200%;
-		height: 57%;
+		width: 150%;
+		height: 48%;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%) rotate(31deg);
+		top: 10%;
+		left: -39.3%;
+		transform: rotate(35deg);
 		background: var(--color-gray);
 		opacity: .4;
 	}
@@ -36,8 +36,11 @@ const ImageBox = s.div`
     -webkit-user-drag: none;
 
 	& > img {
+		display: inline-block;
         width: 136%;
+		// height: 100%;
     	transform: skew(10deg);
+		object-fit: cover;
     }
 
 `;
