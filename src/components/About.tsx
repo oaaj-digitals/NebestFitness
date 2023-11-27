@@ -12,20 +12,20 @@ const AboutBg = s.div`
 	overflow: hidden;
 	
     & > div {
-		width: 150%;
+		width: 200%;
 		height: 48%;
 		position: absolute;
-		top: 10%;
-		left: -39.3%;
-		transform: rotate(35deg);
+		top: 50%;
+		left: -50%;
+		transform: rotate(135deg);
 		background: var(--color-gray);
 		opacity: .4;
 	}
 `;
 
 const ImageBox = s.div`
-    height: 80%;
-	width: 30rem;
+    height: 70%;
+	width: 25rem;
     transform: skew(-10deg);
     display: flex;
     justify-content: center;

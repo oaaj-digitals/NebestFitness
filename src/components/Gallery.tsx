@@ -12,7 +12,7 @@ import gItem8 from "../assets/videos/GVTS-5.mp4";
 const GalleryBox = s.div`
     width: 100%;
     height: auto;
-    max-height: 90%;
+    max-height: 100%;
 
     display: grid;
     justify-content: center;

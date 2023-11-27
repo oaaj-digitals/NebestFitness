@@ -19,7 +19,8 @@ interface StyledComponentProps {
 
 const SectionBox = s.section<StyledComponentProps>`
     width: 100%;
-	height: ${({ height }: StyledComponentProps) => (height ? height : "100vh")};
+	height: ${({ height }: StyledComponentProps) =>
+		height ? height : "calc(100vh - 8rem)"};
 	max-height: max-content;
     padding: ${({ $padding }: StyledComponentProps) =>
 		$padding ? $padding : "4rem 6rem"};
