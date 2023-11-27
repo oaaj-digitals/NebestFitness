@@ -1,5 +1,10 @@
 import { styled as s } from "styled-components";
 import Section from "./Section";
+import useFeeds from "../hooks/useFeeds";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import FeedCard from "./FeedCard";
+import Btn from "./Btn";
 
 const Container = s.div`
     width: 100%;
@@ -22,22 +27,8 @@ const FeedBox = s.div`
     justify-content: space-evenly;
 `;
 
-const FeedCard = s.div`
-    width: 30rem;
-    height: 40rem;
-    padding: 2rem;
-    background: linear-gradient(to bottom, var(--color-red), transparent );
-    font-size: 1.2rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    
-    background: var(--color-red);
-`;
-
 const Blog = () => {
+	const { feeds, error } = useFeeds();
 	return (
 		<Section title="Follow Our Story" id="blog">
 			<Container>
@@ -49,12 +40,19 @@ const Blog = () => {
 				</IntroText>
 
 				<FeedBox>
-					<FeedCard>Instagram Feeds</FeedCard>
-
-					<FeedCard>Instagram Feeds</FeedCard>
-
-					<FeedCard>Instagram Feeds</FeedCard>
+					{error && <p>{error}</p>}
+					{feeds.map((feed) => (
+						<FeedCard key={feed.id} feed={feed}></FeedCard>
+					))}
 				</FeedBox>
+
+				<Btn
+					style={{ alignSelf: "flex-end" }}
+					link="https://instagram.com/nebestfitness"
+				>
+					<p>Follow for more</p>
+					<FontAwesomeIcon icon={faInstagram} size="xl" />
+				</Btn>
 			</Container>
 		</Section>
 	);

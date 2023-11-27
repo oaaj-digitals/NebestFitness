@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 
-interface Feed {
+export interface Feed {
 	id: string;
 	media_type: string;
 	permalink: string;
