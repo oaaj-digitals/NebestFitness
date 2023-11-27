@@ -27,7 +27,10 @@ const Card = s.a`
         object-fit: cover;
         object-position: top;
     }
- 
+
+    &:hover > .caption {
+        background:rgba(0,0,0,1);
+    }
 `;
 
 const Caption = s.p`
@@ -42,9 +45,9 @@ const Caption = s.p`
     bottom: 0;
     left: 0;
     overflow: hidden;
-    transition: all .3s ease-in;
+    transition: all .2s ease-in;
     
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.4);
     backdrop-filter: blur(5px);
 `;
 

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default axios.create({
-	baseURL: "https://v1.nocodeapi.com/nebestfitness/instagram",
+	baseURL: "https://v1.nocodeapi.com",
 	params: {
-		limit: "3",
+		limit: "4",
 	},
 });

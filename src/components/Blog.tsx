@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import FeedCard from "./FeedCard";
 import Btn from "./Btn";
+import FeedCardSkeleton from "./FeedCardSkeleton";
 
 const Container = s.div`
     width: 100%;
@@ -12,8 +13,7 @@ const Container = s.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 2rem;
-
+    padding-top: 1rem;
 `;
 
 const IntroText = s.p`
@@ -28,9 +28,11 @@ const FeedBox = s.div`
 `;
 
 const Blog = () => {
-	const { feeds, error } = useFeeds();
+	const { feeds, error, isLoading } = useFeeds();
+	const skeletons = [0, 1, 2, 3];
+
 	return (
-		<Section title="Follow Our Story" id="blog">
+		<Section title="Follow Our Story" id="blog" height="100vh">
 			<Container>
 				<IntroText>
 					Dive in with us for the latest fitness tips, nutrition
@@ -41,6 +43,12 @@ const Blog = () => {
 
 				<FeedBox>
 					{error && <p>{error}</p>}
+
+					{isLoading &&
+						skeletons.map((skeleton) => (
+							<FeedCardSkeleton key={skeleton} />
+						))}
+
 					{feeds.map((feed) => (
 						<FeedCard key={feed.id} feed={feed}></FeedCard>
 					))}

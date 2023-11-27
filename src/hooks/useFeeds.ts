@@ -20,23 +20,38 @@ interface FetchFeedResponse {
 const useFeeds = () => {
 	const [feeds, setFeeds] = useState<Feed[]>([]);
 	const [error, setError] = useState("");
+	const [isLoading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => {
 		const controller = new AbortController();
+		// Set initial value to avoid display of all at the same time
+		setError("");
+		setFeeds([]);
+		setLoading(true);
+
 		apiClient
-			.get<FetchFeedResponse>("/JjXVSpfOgkEmSfhC", {
-				signal: controller.signal,
+			.get<FetchFeedResponse>(
+				"/nebestfitness/instagram/JjXVSpfOgkEmSfhC",
+				{
+					signal: controller.signal,
+				}
+			)
+			.then((res) => {
+				setFeeds(res.data.data);
+				setLoading(false);
+				setError("");
 			})
-			.then((res) => setFeeds(res.data.data))
 			.catch((err) => {
 				if (err instanceof CanceledError) return;
 				setError(err.message);
+				setLoading(false);
+				setFeeds([]);
 			});
 
 		return () => controller.abort();
 	}, []);
 
-	return { feeds, error };
+	return { feeds, error, isLoading };
 };
 
 export default useFeeds;
