@@ -4,12 +4,15 @@ import { styled as s } from "styled-components";
 interface Props {
 	children: ReactNode;
 	link?: string;
+	style?: {};
 }
 
 const Button = s.a`
     height: max-content;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 2rem;
     padding: 1rem 3rem;
     overflow: hidden;
 
@@ -44,9 +47,9 @@ const Bg = s.div`
     
 `;
 
-const Btn = ({ children, link }: Props) => {
+const Btn = ({ children, link, style }: Props) => {
 	return (
-		<Button href={link ? link : ""} target="_blank">
+		<Button style={style} href={link ? link : ""} target="_blank">
 			<Bg />
 			{children}
 		</Button>
