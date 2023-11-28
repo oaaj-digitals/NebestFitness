@@ -20,20 +20,17 @@ const ServicesBox = s.div`
     justify-content: space-evenly;
     align-content: space-evenly;
     align-items: center;
+	gap: 5rem;
     background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0)), url(${BgImg});
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+	padding: 5rem 0;
 `;
 
 const Services = () => {
 	return (
-		<Section
-			id="services"
-			title="Our Services"
-			padding="3rem"
-			flexDirection="column"
-		>
+		<Section id="services" title="Our Services" flexDirection="column">
 			<ServicesBox>
 				<ServicesCard
 					imgSrc={personalTrainingImg}

@@ -11,7 +11,7 @@ import gItem8 from "../assets/videos/GVTS-5.mp4";
 
 const GalleryBox = s.div`
     width: 100%;
-    height: auto;
+    height: calc(100vw/3);
     max-height: 100%;
 
     display: grid;

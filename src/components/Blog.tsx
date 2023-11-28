@@ -13,7 +13,8 @@ const Container = s.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 1rem;
+    padding-top: 2rem;
+	gap: 4rem;
 `;
 
 const IntroText = s.p`
@@ -42,11 +43,11 @@ const Blog = () => {
 				</IntroText>
 
 				<FeedBox>
-					{error && <p>{error}</p>}
+					{/* {error && <p>{error}</p>} */}
 
-					{isLoading &&
+					{(isLoading || error) &&
 						skeletons.map((skeleton) => (
-							<FeedCardSkeleton key={skeleton} />
+							<FeedCardSkeleton key={skeleton} error={error} />
 						))}
 
 					{feeds.map((feed) => (

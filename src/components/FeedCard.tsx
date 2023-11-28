@@ -7,8 +7,8 @@ interface Props {
 
 const Card = s.a`
 
-    width: 25rem;
-    height: 34rem;
+    width: calc(100vw/5);
+    height: calc(100vw/4);
     background: linear-gradient(to bottom, var(--color-red), transparent );
     font-size: 1.2rem !important;
     display: flex;

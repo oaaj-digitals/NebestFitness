@@ -49,7 +49,7 @@ const NavBar = s.nav`
 const HeaderMain = s.div`
 	position: absolute;
 	top: calc(50% + 4rem);
-	left: 10rem;
+	left: 4vw;
 	transform: translateY(-50%);
 
 	width: 60rem;
@@ -66,8 +66,8 @@ const Title = s.h1`
 
 const SocialMediaBox = s.div`
 	position: absolute;
-	bottom: 3rem;
-	right: 10rem;
+	bottom: 5vh;
+	right: 6vw;
 
 	display: flex;
 	gap: 4rem;

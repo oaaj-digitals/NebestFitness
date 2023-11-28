@@ -10,13 +10,14 @@ import FullLogo from "../assets/images/nebest-full-logo.svg";
 
 const FooterBox = s.footer`
     width: 100%;
-    height: 30vh;
-    padding: 2rem 4rem;
+    height: max-content;
+    padding: 4rem;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items:center;
+	gap: 4rem;
 	border-top: 1px solid #f5f5f555;
 `;
 

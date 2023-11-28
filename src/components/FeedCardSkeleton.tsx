@@ -1,5 +1,13 @@
 import { styled as s, keyframes } from "styled-components";
 
+interface Props {
+	error?: string;
+}
+
+interface styleProps {
+	error?: string;
+}
+
 const loadinFades = keyframes`
     0% {
         
@@ -11,10 +19,9 @@ const loadinFades = keyframes`
     }
 `;
 
-const Card = s.div`
-
-    width: 25rem;
-    height: 34rem;
+const Card = s.div<styleProps>`
+    width: calc(100vw/5);
+    height: calc(100vw/4);
     font-size: 1.2rem !important;
     display: flex;
     flex-direction: column;
@@ -24,7 +31,8 @@ const Card = s.div`
     
     background: linear-gradient(to bottom right, var(--color-red) 0%, transparent 100%);
 
-    animation: ${loadinFades} 1s ease-in-out infinite alternate;
+    animation: ${({ error }: styleProps) =>
+		error === "" ? loadinFades : ""} 1s ease-in-out infinite alternate;
     animation-fill-mode: forwards;
 `;
 
@@ -41,9 +49,10 @@ const Caption = s.div`
     backdrop-filter: blur(10px);
 `;
 
-const FeedCardSkeleton = () => {
+const FeedCardSkeleton = ({ error }: Props) => {
 	return (
 		<Card>
+			{true && error}
 			<Caption></Caption>
 		</Card>
 	);

@@ -19,14 +19,21 @@ interface StyledComponentProps {
 
 const SectionBox = s.section<StyledComponentProps>`
     width: 100%;
-	height: ${({ height }: StyledComponentProps) =>
-		height ? height : "calc(100vh - 8rem)"};
-	max-height: max-content;
+	max-height:  ${({ height }: StyledComponentProps) =>
+		height || "clac(100vh - 8rem)"};
+	height: max-content;
     padding: ${({ $padding }: StyledComponentProps) =>
-		$padding ? $padding : "4rem 6rem"};
+		$padding || "12rem 6rem 0rem"};
     display:flex;
     flex-direction: column;
+
+	&:nth-of-type(2) {
+		padding-top: 10rem;
+	}
     
+	&:last-of-type {
+		padding-bottom: 7rem;
+	}
 `;
 
 const SectionTitleBox = s.div`
