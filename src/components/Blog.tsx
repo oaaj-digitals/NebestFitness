@@ -6,10 +6,11 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import FeedCard from "./FeedCard";
 import Btn from "./Btn";
 import FeedCardSkeleton from "./FeedCardSkeleton";
+import { breakpoints } from "../services/design-breakpoints";
 
 const Container = s.div`
     width: 100%;
-    height: 100%;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,6 +27,11 @@ const FeedBox = s.div`
     height: max-content;
     display: flex;
     justify-content: space-evenly;
+	
+	@media (max-width: ${breakpoints.phone}) {
+		gap: 5rem;
+		flex-wrap: wrap;
+	}
 `;
 
 const Blog = () => {

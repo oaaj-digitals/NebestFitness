@@ -1,5 +1,6 @@
 import { styled as s } from "styled-components";
 import { Feed } from "../hooks/useFeeds";
+import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
 	feed: Feed;
@@ -31,6 +32,12 @@ const Card = s.a`
     &:hover > .caption {
         background:rgba(0,0,0,1);
     }
+
+    @media (max-width: ${breakpoints.phone}) {
+		width: calc(100vw/3);
+        height: calc(100vw/2);
+        flex-shrink: 0;
+	}
 `;
 
 const Caption = s.p`

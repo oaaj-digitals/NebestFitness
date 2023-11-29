@@ -1,4 +1,5 @@
 import { styled as s, keyframes } from "styled-components";
+import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
 	error?: string;
@@ -34,6 +35,12 @@ const Card = s.div<styleProps>`
     animation: ${({ error }: styleProps) =>
 		error === "" ? loadinFades : ""} 1s ease-in-out infinite alternate;
     animation-fill-mode: forwards;
+
+    @media (max-width: ${breakpoints.phone}) {
+		width: calc(100vw/3);
+        height: calc(100vw/2);
+        flex-shrink: 0;
+	}
 `;
 
 const Caption = s.div`
