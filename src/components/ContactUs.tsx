@@ -1,5 +1,6 @@
 import { styled as s } from "styled-components";
 import Section from "./Section";
+import { breakpoints } from "../services/design-breakpoints";
 
 const ContactInfo = s.div`
     width: 90%;
@@ -7,6 +8,13 @@ const ContactInfo = s.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+	@media (max-width: ${breakpoints.phone}) {
+        width: 100%;
+        height: max-content;
+		flex-direction: column;
+		gap: 3rem;
+	}
 `;
 
 const InfoBox = s.div`
@@ -19,6 +27,10 @@ const InfoBox = s.div`
 
 const TitleBox = s.div`
     width: max-content;
+
+	@media (max-width: ${breakpoints.phone}) {
+        order: -1;
+	}
 `;
 
 const Title = s.h2`
