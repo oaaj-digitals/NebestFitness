@@ -7,6 +7,7 @@ import {
 	faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import FullLogo from "../assets/images/nebest-full-logo.svg";
+import { breakpoints } from "../services/design-breakpoints";
 
 const FooterBox = s.footer`
     width: 100%;
@@ -19,6 +20,16 @@ const FooterBox = s.footer`
     align-items:center;
 	gap: 4rem;
 	border-top: 1px solid #f5f5f555;
+
+	@media (max-width: ${breakpoints.phone}) {
+		gap: 5rem;
+		justify-content: center;
+        & > p {
+			width: 100%;
+			order: 5;
+			text-align: center;
+		}
+	}
 `;
 
 const Logo = s.img`
@@ -31,6 +42,11 @@ const NavBar = s.nav`
 	display: flex;
 	gap: 3rem;
 	font-size: 1.3rem !important;
+
+	@media (max-width: ${breakpoints.phone}) {
+        justify-content: center;
+		gap: 2rem;
+	}
 `;
 
 const SocialMediaBox = s.div`
