@@ -74,7 +74,7 @@ const Testimonials = () => {
 							working with Emmanuel and am looking forward to
 							seeing where I can take it with his help.
 						</p>
-						<p>- Anonymous</p>
+						<p>- James</p>
 					</TestimonialCard>
 
 					<TestimonialCard>
@@ -98,7 +98,7 @@ const Testimonials = () => {
 							blends different elements, keeping the routine
 							exciting and effective for me.
 						</p>
-						<p>- James</p>
+						<p>- Aliff</p>
 					</TestimonialCard>
 
 					<TestimonialCard>
@@ -113,7 +113,7 @@ const Testimonials = () => {
 							feel i am better prepared to face the world thanks
 							to his guidance and support.
 						</p>
-						<p>- Anonymous</p>
+						<p>- George</p>
 					</TestimonialCard>
 				</TestimonialsBox>
 			</Container>
