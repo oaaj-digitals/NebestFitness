@@ -1,5 +1,6 @@
 import { styled as s } from "styled-components";
 import { ReactNode } from "react";
+import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
 	id?: string;
@@ -34,6 +35,10 @@ const SectionBox = s.section<StyledComponentProps>`
 	&:last-of-type {
 		padding-bottom: 7rem;
 	}
+
+	@media (max-width: ${breakpoints.phone}) {
+		max-height:  max-content;
+	}
 `;
 
 const SectionTitleBox = s.div`
@@ -49,7 +54,7 @@ const SectionTitle = s.h2`
 
 const SectionMain = s.div<StyledComponentProps>`
     width:100%;
-	height: 100%;
+	height: max-content;
 
     display: flex;
     justify-content: space-evenly;
