@@ -1,4 +1,5 @@
 import { styled as s } from "styled-components";
+import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
 	title: string;
@@ -25,6 +26,13 @@ const Service = s.div`
     &:hover img {
         opacity: 1;
     }
+
+    @media (max-width: ${breakpoints.phone}) {
+        width: 33vw;
+        height: 22vw;
+		flex-shrink: 0;
+        text-align: center;
+	}
 `;
 
 const ImageBox = s.div`
@@ -45,7 +53,8 @@ const Image = s.img`
 const Title = s.p`
     flex-shrink: 0;
     width: 100%;
-    height: 25%;
+    height: max-content;
+    padding: .5rem;
     font: var(--tertiary-heading);
     letter-spacing: .5px;
     display: flex;

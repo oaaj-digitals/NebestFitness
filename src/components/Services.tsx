@@ -9,6 +9,7 @@ import wellnessImg from "../assets/images/dane-wetton-t1NEMSm1rgI-unsplash (2).j
 import MartialArtImg from "../assets/images/mark-adriane-FH6JcaCrYJ0-unsplash (2).jpg";
 import SelfDefenseImg from "../assets/images/samuel-castro-cwScwJy5HQE-unsplash (2).jpg";
 import Btn from "./Btn";
+import { breakpoints } from "../services/design-breakpoints";
 
 const ServicesBox = s.div`
     width: 100%;
@@ -26,6 +27,13 @@ const ServicesBox = s.div`
     background-size: contain;
     background-position: center;
 	padding: 5rem 0;
+
+	@media (max-width: ${breakpoints.phone}) {
+		height: max-content;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 `;
 
 const Services = () => {
