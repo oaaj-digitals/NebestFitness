@@ -155,7 +155,10 @@ const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const handleMenuOpen = (state: boolean) => {
-		setIsMenuOpen(!state);
+		const screen = window.innerWidth;
+		const breakPoint = parseInt(breakpoints.tabPort) * 16;
+
+		screen <= breakPoint ? setIsMenuOpen(!state) : null;
 	};
 
 	useEffect(() => {
@@ -178,13 +181,62 @@ const Header = () => {
 						/>
 					</MenuBtn>
 					<NavBar style={isMenuOpen ? { display: "flex" } : {}}>
-						<a href="/#header">Home</a>
-						<a href="/#about-us">About Us</a>
-						<a href="/#services">Services</a>
-						<a href="/#gallery">Gallery</a>
-						<a href="/#testimonials">Testimonials</a>
-						<a href="/#contact-us">Contact Us</a>
-						<a href="/#blog">Blog</a>
+						<a
+							href="/#header"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							Home
+						</a>
+						<a
+							href="/#about-us"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							About Us
+						</a>
+						<a
+							href="/#services"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							Services
+						</a>
+						<a
+							href="/#gallery"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							Gallery
+						</a>
+						<a
+							href="/#testimonials"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							Testimonials
+						</a>
+						<a
+							href="/#contact-us"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							Contact Us
+						</a>
+						<a
+							href="/#blog"
+							onClick={() => {
+								handleMenuOpen(isMenuOpen);
+							}}
+						>
+							Blog
+						</a>
 					</NavBar>
 				</div>
 			</HeaderTop>
