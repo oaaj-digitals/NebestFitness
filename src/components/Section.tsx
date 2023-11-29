@@ -37,6 +37,8 @@ const SectionBox = s.section<StyledComponentProps>`
 	}
 
 	@media (max-width: ${breakpoints.phone}) {
+		padding: ${({ $padding }: StyledComponentProps) =>
+			$padding || "12rem 6vw 0rem"};
 		max-height:  max-content;
 	}
 `;
