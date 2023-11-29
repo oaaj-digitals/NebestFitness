@@ -1,5 +1,6 @@
 import { styled as s } from "styled-components";
 import Section from "./Section";
+import { breakpoints } from "../services/design-breakpoints";
 
 const Container = s.div`
     width: 100%;
@@ -20,8 +21,11 @@ const TestimonialsBox = s.div`
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    // background: blue;
-
+    
+	@media (max-width: ${breakpoints.phone}) {
+		gap: 2rem;
+        flex-wrap: wrap;
+	}
 `;
 
 const TestimonialCard = s.div`
@@ -33,6 +37,15 @@ const TestimonialCard = s.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+	@media (max-width: ${breakpoints.phone}) {
+		width: calc(100vw/3);
+        flex-shrink: 0;
+
+		&:nth-of-type(2) {
+			order: 4;
+		}
+	}
 `;
 
 const Testimonials = () => {
