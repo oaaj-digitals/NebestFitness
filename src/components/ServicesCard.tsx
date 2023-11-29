@@ -28,8 +28,8 @@ const Service = s.div`
     }
 
     @media (max-width: ${breakpoints.phone}) {
-        width: 33vw;
-        height: 22vw;
+        width: calc(85vw/2.5);
+        height: calc(85vw/3.5);
 		flex-shrink: 0;
         text-align: center;
 	}

@@ -32,7 +32,7 @@ const ServicesBox = s.div`
 		height: max-content;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 `;
 
