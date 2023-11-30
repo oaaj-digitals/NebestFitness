@@ -116,7 +116,7 @@ const HeaderMain = s.div`
 		position: static;
 		transform: translateY(0%);
 		width: 100%;
-		padding: 0 15vw;
+		padding: 0 12vw;
 		text-align: center;
 		align-items: center;
 	}
