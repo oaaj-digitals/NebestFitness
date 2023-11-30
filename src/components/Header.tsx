@@ -34,8 +34,8 @@ const HeaderBox = s.header`
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		gap: 20vh;
-		padding-top: calc(8rem + 20vh);
+		gap: 16vh;
+		padding-top: calc(8rem + 16vh);
 		min-height: 70vh;
 		height: max-content;
 		max-height: 100vh
@@ -116,7 +116,7 @@ const HeaderMain = s.div`
 		position: static;
 		transform: translateY(0%);
 		width: 100%;
-		padding: 0 12vw;
+		padding: 0 15vw;
 		text-align: center;
 		align-items: center;
 	}
