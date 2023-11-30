@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { styled as s } from "styled-components";
+import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
 	children: ReactNode;
@@ -44,7 +45,9 @@ const Bg = s.div`
 
     transition: all .3s ease-in;
     
-    
+    @media (max-width: ${breakpoints.tabPort}) {
+        right: 0%;
+	}
 `;
 
 const Btn = ({ children, link, style }: Props) => {
