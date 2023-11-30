@@ -9,6 +9,10 @@ const ContactInfo = s.div`
     justify-content: space-between;
     align-items: center;
 
+	@media (max-width: ${breakpoints.tabPort}) {
+        width: 100%;
+	}
+
 	@media (max-width: ${breakpoints.phone}) {
         width: 100%;
         height: max-content;
@@ -37,6 +41,10 @@ const Title = s.h2`
     font: var(--primary-heading);
     line-height: .9;
     font-size: 7rem;
+
+	@media (max-width: ${breakpoints.tabPort}) {
+        font-size: 6rem !important;
+	}
 `;
 
 const Contact = () => {
@@ -45,7 +53,7 @@ const Contact = () => {
 			<ContactInfo>
 				<InfoBox>
 					<p>
-						<span>Phone:</span> 07501 080466
+						<span>Phone:</span> +44(0) 7501 080466
 					</p>
 					<p>
 						<span>Email:</span> NebestFitness@gmail.com
