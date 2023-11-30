@@ -4,6 +4,7 @@ import {
 	faFacebookF,
 	faInstagram,
 	faTiktok,
+	faWhatsapp,
 	faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import FullLogo from "../assets/images/nebest-full-logo.svg";
@@ -11,6 +12,7 @@ import BgImg from "../assets/images/headerBgImg.svg";
 import { breakpoints } from "../services/design-breakpoints";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
+import Btn from "./Btn";
 
 const HeaderBox = s.header`
 	width: 100%;
@@ -151,6 +153,12 @@ const MenuBtn = s.div`
 	}
 `;
 
+const headerBtnStyle = {
+	width: "max-content",
+	marginTop: "2rem",
+	fontSize: "2rem",
+};
+
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -249,23 +257,32 @@ const Header = () => {
 					transformative fitness experience. Embark on a journey of
 					welness and strength with us.
 				</p>
+				<Btn
+					style={headerBtnStyle}
+					link="https://pdfbwss34k5.typeform.com/to/Cf2YXHll?typeform-source=linktr.ee"
+				>
+					Start Today
+				</Btn>
 			</HeaderMain>
 
 			<SocialMediaBox>
 				<a href="https://instagram.com/nebestfitness" target="_blank">
 					<FontAwesomeIcon icon={faInstagram} size="2x" />
 				</a>
+				<a href="https://wa.me/message/JX6TOLTPPD26J1" target="_blank">
+					<FontAwesomeIcon icon={faWhatsapp} size="2x" />
+				</a>
 				<a href="https://x.com/nebestfitness" target="_blank">
 					<FontAwesomeIcon icon={faXTwitter} size="2x" />
+				</a>
+				<a href="https://tiktok.com/@nebestfitness" target="_blank">
+					<FontAwesomeIcon icon={faTiktok} size="2x" />
 				</a>
 				<a
 					href="https://facebook.com/profile.php?id=100078758541400"
 					target="_blank"
 				>
 					<FontAwesomeIcon icon={faFacebookF} size="2x" />
-				</a>
-				<a href="https://tiktok.com/@nebestfitness" target="_blank">
-					<FontAwesomeIcon icon={faTiktok} size="2x" />
 				</a>
 			</SocialMediaBox>
 		</HeaderBox>

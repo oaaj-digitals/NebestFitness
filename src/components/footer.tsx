@@ -4,6 +4,7 @@ import {
 	faFacebookF,
 	faInstagram,
 	faTiktok,
+	faWhatsapp,
 	faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import FullLogo from "../assets/images/nebest-full-logo.svg";
@@ -71,17 +72,20 @@ const footer = () => {
 				<a href="https://instagram.com/nebestfitness" target="_blank">
 					<FontAwesomeIcon icon={faInstagram} size="2x" />
 				</a>
+				<a href="https://wa.me/message/JX6TOLTPPD26J1" target="_blank">
+					<FontAwesomeIcon icon={faWhatsapp} size="2x" />
+				</a>
 				<a href="https://x.com/nebestfitness" target="_blank">
 					<FontAwesomeIcon icon={faXTwitter} size="2x" />
+				</a>
+				<a href="https://tiktok.com/@nebestfitness" target="_blank">
+					<FontAwesomeIcon icon={faTiktok} size="2x" />
 				</a>
 				<a
 					href="https://facebook.com/profile.php?id=100078758541400"
 					target="_blank"
 				>
 					<FontAwesomeIcon icon={faFacebookF} size="2x" />
-				</a>
-				<a href="https://tiktok.com/@nebestfitness" target="_blank">
-					<FontAwesomeIcon icon={faTiktok} size="2x" />
 				</a>
 			</SocialMediaBox>
 
