@@ -107,11 +107,11 @@ const Testimonials = () => {
 							martial arts has transformed my skills
 							significantly. The focus on speed, body
 							coordination, and overall technique has elevated my
-							performance to new heights. He motivational coaching
-							style inspires me to give my best in every session.
-							I can’t believe how far I’ve come since I started. I
-							feel i am better prepared to face the world thanks
-							to his guidance and support.
+							performance to new heights. His motivational
+							coaching style inspires me to give my best in every
+							session. I can’t believe how far I’ve come since I
+							started. I feel i am better prepared to face the
+							world thanks to his guidance and support.
 						</p>
 						<p>- George</p>
 					</TestimonialCard>
