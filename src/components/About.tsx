@@ -51,6 +51,7 @@ const TextContentBox = s.div`
     gap: 4rem; 
 
 	@media (max-width: ${breakpoints.phone}) {
+		width: 100%;
 		order: -1;
 	}
 `;
