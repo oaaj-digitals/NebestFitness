@@ -1,16 +1,22 @@
 import { styled as s } from "styled-components";
 import Section from "./Section";
 import aboutImage from "../assets/images/IMG_1377.jpg";
+import { breakpoints } from "../services/design-breakpoints";
 
 const AboutBg = s.div`
-		width: 200%;
-		height: 48%;
-		position: absolute;
-		top: 50%;
-		left: -50%;
-		transform: rotate(135deg);
-		background: var(--color-gray);
-		opacity: .4;
+	width: 200%;
+	height: 48%;
+	position: absolute;
+	top: 50%;
+	left: -50%;
+	transform: rotate(135deg);
+	background: var(--color-gray);
+	opacity: .4;
+
+	@media (max-width: ${breakpoints.phone}) {
+		width: 220%;
+		height: 30%;
+	}
 `;
 
 const ImageBox = s.div`
@@ -32,6 +38,10 @@ const ImageBox = s.div`
 		object-fit: cover;
     }
 
+	@media (max-width: ${breakpoints.phone}) {
+		width: 50vw;
+		height: max-content;
+	}
 `;
 
 const TextContentBox = s.div`
@@ -39,10 +49,18 @@ const TextContentBox = s.div`
     display: flex;
     flex-direction: column;
     gap: 4rem; 
+
+	@media (max-width: ${breakpoints.phone}) {
+		order: -1;
+	}
 `;
 
 const TitleBox = s.div`
     align-self: flex-end;
+
+	@media (max-width: ${breakpoints.phone}) {
+		align-self: center;
+	}
 `;
 
 const Title = s.h2`
@@ -54,6 +72,11 @@ const Text = s.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+	@media (max-width: ${breakpoints.phone}) {
+		padding: 0 2rem;
+		gap: 1rem;
+	}
 `;
 
 const Container = s.div`
@@ -64,6 +87,12 @@ const Container = s.div`
 	align-items: center;
 	background: radial-gradient(circle at 50% 50%, var(--color-gray), var(--color-black) 40%);
 	overflow: hidden;
+
+	@media (max-width: ${breakpoints.phone}) {
+		flex-direction: column;
+		padding: 11rem 0 5rem 0;
+		gap: 3rem;
+	}
 `;
 
 const About = () => {
