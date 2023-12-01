@@ -6,7 +6,7 @@
 
 :root {
 	--default-font-size: 1.6rem;
-	--primary-heading: 900 9rem "Oxanium", "Trebuchet MS";
+	--primary-heading: 800 9rem "Oxanium", "Trebuchet MS";
 	--secondary-heading: 700 3rem "Oxanium", "Trebuchet MS";
 	--tertiary-heading: 600 1.6rem "Oxanium", "Trebuchet MS";
 
@@ -90,6 +90,6 @@ li {
 
 @media (max-width: 37.5em) {
 	html {
-		font-size: 43.75%; /* 1rem = 7px*/
+		font-size: 46.88%; /* 1rem = 7.5px*/
 	}
 }
