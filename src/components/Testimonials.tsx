@@ -41,6 +41,7 @@ const TestimonialCard = s.div`
 	@media (max-width: ${breakpoints.phone}) {
 		width: calc(100vw/3);
         flex-shrink: 0;
+		font-size: 1.4rem !important;
 
 		&:nth-of-type(2) {
 			order: 4;
