@@ -34,8 +34,8 @@ const Card = s.a`
     }
 
     @media (max-width: ${breakpoints.phone}) {
-		width: calc(100vw/3);
-        height: calc(100vw/2);
+		width: calc(100vw/2.6);
+        height: calc(100vw/1.8);;
         flex-shrink: 0;
 	}
 `;
@@ -62,7 +62,11 @@ const FeedCard = ({ feed }: Props) => {
 	const caption = feed.caption.substring(0, 100);
 	return (
 		<Card href={feed.permalink} target="_blank" rel="noopener noreferrer">
-			<img src={feed.thumbnail_url || feed.media_url} alt="" />
+			<img
+				src={feed.thumbnail_url || feed.media_url}
+				alt=""
+				loading="lazy"
+			/>
 			<Caption className="caption">
 				{feed.caption && caption + "..."}
 			</Caption>

@@ -29,14 +29,14 @@ const FeedBox = s.div`
     justify-content: space-evenly;
 	
 	@media (max-width: ${breakpoints.phone}) {
-		gap: 5rem;
+		gap: 5vw;
 		flex-wrap: wrap;
 	}
 `;
 
 const Blog = () => {
 	const { feeds, error, isLoading } = useFeeds();
-	const skeletons = [0, 1, 2, 3];
+	const latestMedia = [0, 1, 2, 3];
 
 	return (
 		<Section title="Follow Our Story" id="blog" height="100vh">
@@ -49,16 +49,16 @@ const Blog = () => {
 				</IntroText>
 
 				<FeedBox>
-					{/* {error && <p>{error}</p>} */}
-
-					{(isLoading || error) &&
-						skeletons.map((skeleton) => (
-							<FeedCardSkeleton key={skeleton} error={error} />
-						))}
-
-					{feeds.map((feed) => (
-						<FeedCard key={feed.id} feed={feed}></FeedCard>
-					))}
+					{latestMedia.map((media) =>
+						isLoading || error ? (
+							<FeedCardSkeleton key={media} error={error} />
+						) : (
+							<FeedCard
+								key={media}
+								feed={feeds[media]}
+							></FeedCard>
+						)
+					)}
 				</FeedBox>
 
 				<Btn

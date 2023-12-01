@@ -4,13 +4,10 @@ import { CanceledError } from "axios";
 
 export interface Feed {
 	id: string;
-	media_type: string;
 	permalink: string;
 	media_url: string;
 	thumbnail_url: string;
-	username: string;
 	caption: string;
-	timestamp: string;
 }
 
 interface FetchFeedResponse {
@@ -22,8 +19,11 @@ const useFeeds = () => {
 	const [error, setError] = useState("");
 	const [isLoading, setLoading] = useState<boolean>(true);
 
+	const accessToken = import.meta.env.VITE_USER_ACCESS_TOKEN;
+
 	useEffect(() => {
 		const controller = new AbortController();
+
 		// Set initial value to avoid display of all at the same time
 		setError("");
 		setFeeds([]);
@@ -31,7 +31,7 @@ const useFeeds = () => {
 
 		apiClient
 			.get<FetchFeedResponse>(
-				"/nebestfitness/instagram/JjXVSpfOgkEmSfhC",
+				`/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${accessToken}`,
 				{
 					signal: controller.signal,
 				}

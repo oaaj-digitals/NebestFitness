@@ -37,8 +37,8 @@ const Card = s.div<styleProps>`
     animation-fill-mode: forwards;
 
     @media (max-width: ${breakpoints.phone}) {
-		width: calc(100vw/3);
-        height: calc(100vw/2);
+		width: calc(100vw/2.6);
+        height: calc(100vw/1.8);
         flex-shrink: 0;
 	}
 `;
