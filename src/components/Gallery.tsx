@@ -8,6 +8,7 @@ import gItem5 from "../assets/videos/video-1.mp4";
 import gItem6 from "../assets/videos/GVTS-3.mp4";
 import gItem7 from "../assets/images/Image-2.png";
 import gItem8 from "../assets/videos/GVTS-5.mp4";
+import vPoster from "../assets/images/logo-pattern-red.svg";
 import { breakpoints } from "../services/design-breakpoints";
 
 const GalleryBox = s.div`
@@ -133,38 +134,48 @@ const Item8 = s.div`
 
 const Gallery = () => {
 	return (
-		<Section id="gallery" title="Workout Moments">
+		<Section id="gallery" title="Explore Our Fitness Gallery">
 			<GalleryBox>
 				<Item1 className="grid-item">
-					<video src={gItem1} controls />
+					<video controls preload="none" poster={vPoster}>
+						<source type="video/mp4" src={gItem1} />
+					</video>
 				</Item1>
 
 				<Item2 className="grid-item">
-					<img src={gItem2} alt="" />
+					<img src={gItem2} alt="" loading="lazy" />
 				</Item2>
 
 				<Item3 className="grid-item">
-					<img src={gItem3} alt="" />
+					<img src={gItem3} alt="" loading="lazy" />
 				</Item3>
 
 				<Item4 className="grid-item">
-					<video src={gItem4} controls />
+					<video controls preload="none" poster={vPoster}>
+						<source type="video/mp4" src={gItem4} />
+					</video>
 				</Item4>
 
 				<Item5 className="grid-item">
-					<video src={gItem5} controls />
+					<video controls preload="none" poster={vPoster}>
+						<source type="video/mp4" src={gItem5} />
+					</video>
 				</Item5>
 
 				<Item6 className="grid-item">
-					<video src={gItem6} controls />
+					<video controls preload="none" poster={vPoster}>
+						<source type="video/mp4" src={gItem6} />
+					</video>
 				</Item6>
 
 				<Item7 className="grid-item">
-					<img src={gItem7} alt="" />
+					<img src={gItem7} alt="" loading="lazy" />
 				</Item7>
 
 				<Item8 className="grid-item">
-					<video src={gItem8} controls />
+					<video controls preload="none" poster={vPoster}>
+						<source type="video/mp4" src={gItem8} />
+					</video>
 				</Item8>
 			</GalleryBox>
 		</Section>
