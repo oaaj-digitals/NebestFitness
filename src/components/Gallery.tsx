@@ -1,14 +1,18 @@
 import { styled as s } from "styled-components";
 import Section from "./Section";
 import gItem1 from "../assets/videos/GVTS-1.mp4";
+import thumbnail1 from "../assets/images/vThumb (2).png";
 import gItem2 from "../assets/images/Image-1.png";
 import gItem3 from "../assets/images/IMG_1421.jpg";
 import gItem4 from "../assets/videos/GVTS-2.mp4";
+import thumbnail2 from "../assets/images/vThumb (3).png";
 import gItem5 from "../assets/videos/video-1.mp4";
+import thumbnail3 from "../assets/images/vThumb (1).png";
 import gItem6 from "../assets/videos/GVTS-3.mp4";
+import thumbnail4 from "../assets/images/vThumb (4).png";
 import gItem7 from "../assets/images/Image-2.png";
 import gItem8 from "../assets/videos/GVTS-5.mp4";
-import vPoster from "../assets/images/logo-pattern-red.svg";
+import thumbnail5 from "../assets/images/vThumb (5).png";
 import { breakpoints } from "../services/design-breakpoints";
 
 const GalleryBox = s.div`
@@ -137,7 +141,7 @@ const Gallery = () => {
 		<Section id="gallery" title="Explore Our Fitness Gallery">
 			<GalleryBox>
 				<Item1 className="grid-item">
-					<video controls preload="none" poster={vPoster}>
+					<video controls preload="none" poster={thumbnail1}>
 						<source type="video/mp4" src={gItem1} />
 					</video>
 				</Item1>
@@ -151,19 +155,19 @@ const Gallery = () => {
 				</Item3>
 
 				<Item4 className="grid-item">
-					<video controls preload="none" poster={vPoster}>
+					<video controls preload="none" poster={thumbnail2}>
 						<source type="video/mp4" src={gItem4} />
 					</video>
 				</Item4>
 
 				<Item5 className="grid-item">
-					<video controls preload="none" poster={vPoster}>
+					<video controls preload="none" poster={thumbnail3}>
 						<source type="video/mp4" src={gItem5} />
 					</video>
 				</Item5>
 
 				<Item6 className="grid-item">
-					<video controls preload="none" poster={vPoster}>
+					<video controls preload="none" poster={thumbnail4}>
 						<source type="video/mp4" src={gItem6} />
 					</video>
 				</Item6>
@@ -173,7 +177,7 @@ const Gallery = () => {
 				</Item7>
 
 				<Item8 className="grid-item">
-					<video controls preload="none" poster={vPoster}>
+					<video controls preload="none" poster={thumbnail5}>
 						<source type="video/mp4" src={gItem8} />
 					</video>
 				</Item8>
