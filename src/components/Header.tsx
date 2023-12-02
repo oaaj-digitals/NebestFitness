@@ -176,7 +176,7 @@ const Header = () => {
 	return (
 		<HeaderBox id="header">
 			<HeaderTop>
-				<Logo src={FullLogo} />
+				<Logo src={FullLogo} alt="NebestFitness Logo" />
 				<div>
 					<MenuBtn
 						onClick={() => {
@@ -266,21 +266,38 @@ const Header = () => {
 			</HeaderMain>
 
 			<SocialMediaBox>
-				<a href="https://instagram.com/nebestfitness" target="_blank">
+				<a
+					href="https://instagram.com/nebestfitness"
+					target="_blank"
+					aria-label="Link to Instagram account"
+				>
 					<FontAwesomeIcon icon={faInstagram} size="2x" />
 				</a>
-				<a href="https://wa.me/message/JX6TOLTPPD26J1" target="_blank">
+				<a
+					href="https://wa.me/message/JX6TOLTPPD26J1"
+					target="_blank"
+					aria-label="Link to Whatsapp account"
+				>
 					<FontAwesomeIcon icon={faWhatsapp} size="2x" />
 				</a>
-				<a href="https://x.com/nebestfitness" target="_blank">
+				<a
+					href="https://x.com/nebestfitness"
+					target="_blank"
+					aria-label="Link to X(Twitter) account"
+				>
 					<FontAwesomeIcon icon={faXTwitter} size="2x" />
 				</a>
-				<a href="https://tiktok.com/@nebestfitness" target="_blank">
+				<a
+					href="https://tiktok.com/@nebestfitness"
+					target="_blank"
+					aria-label="Link to TikTok account"
+				>
 					<FontAwesomeIcon icon={faTiktok} size="2x" />
 				</a>
 				<a
 					href="https://facebook.com/profile.php?id=100078758541400"
 					target="_blank"
+					aria-label="Link to Facebook page"
 				>
 					<FontAwesomeIcon icon={faFacebookF} size="2x" />
 				</a>
