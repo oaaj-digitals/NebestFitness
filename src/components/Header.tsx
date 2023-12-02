@@ -119,6 +119,10 @@ const HeaderMain = s.div`
 		padding: 0 15vw;
 		text-align: center;
 		align-items: center;
+
+		& > p {
+			width: 115%;
+		}
 	}
 `;
 
