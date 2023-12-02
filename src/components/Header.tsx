@@ -35,7 +35,7 @@ const HeaderBox = s.header`
 		justify-content: space-between;
 		align-items: center;
 		gap: 16vh;
-		padding-top: calc(8rem + 15vh);
+		padding-top: calc(8rem + 12vh);
 		min-height: 70vh;
 		height: max-content;
 		max-height: 100vh
