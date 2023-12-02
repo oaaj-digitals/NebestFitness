@@ -92,4 +92,8 @@ li {
 	html {
 		font-size: 46.88%; /* 1rem = 7.5px*/
 	}
+
+	body {
+		font-size: 1.8rem;
+	}
 }

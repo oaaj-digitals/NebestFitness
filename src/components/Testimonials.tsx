@@ -23,7 +23,7 @@ const TestimonialsBox = s.div`
     justify-content: space-evenly;
     
 	@media (max-width: ${breakpoints.phone}) {
-		gap: 2rem;
+		gap: 2.5rem;
         flex-wrap: wrap;
 	}
 `;
@@ -39,9 +39,9 @@ const TestimonialCard = s.div`
     gap: 1rem;
 
 	@media (max-width: ${breakpoints.phone}) {
-		width: calc(100vw/3);
+		width: 85%;
         flex-shrink: 0;
-		font-size: 1.4rem !important;
+		font-size: 1.6rem !important;
 
 		&:nth-of-type(2) {
 			order: 4;

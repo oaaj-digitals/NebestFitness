@@ -29,6 +29,7 @@ const Card = s.div<styleProps>`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 3rem;
     
     background: linear-gradient(to bottom right, var(--color-red) 0%, transparent 100%);
 
@@ -59,7 +60,8 @@ const Caption = s.div`
 const FeedCardSkeleton = ({ error }: Props) => {
 	return (
 		<Card>
-			{true && error}
+			{error &&
+				"Oops! Something went on our end. Apologies for the inconvenience."}
 			<Caption></Caption>
 		</Card>
 	);
