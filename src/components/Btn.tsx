@@ -16,6 +16,7 @@ const Button = s.a`
     gap: 2rem;
     padding: 1rem 3rem;
     overflow: hidden;
+    z-index: 10;
 
     & * {
         color: inherit;
