@@ -27,6 +27,11 @@ const Service = s.div`
         opacity: 1;
     }
 
+    @media (max-width: ${breakpoints.tabPort}) {
+        width: 23rem;
+        height: 15rem;
+	}
+
     @media (max-width: ${breakpoints.phone}) {
         width: calc(85vw/2.5);
         height: calc(85vw/3.5);

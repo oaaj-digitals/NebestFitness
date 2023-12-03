@@ -22,13 +22,13 @@ const ServicesBox = s.div`
     align-content: space-evenly;
     align-items: center;
 	gap: 5rem;
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0)), url(${BgImg});
+	background-image: url(${BgImg});
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 	padding: 5rem 0;
 
-	@media (max-width: ${breakpoints.phone}) {
+	@media (max-width: ${breakpoints.tabPort}) {
 		height: max-content;
 		display: flex;
 		flex-wrap: wrap;
