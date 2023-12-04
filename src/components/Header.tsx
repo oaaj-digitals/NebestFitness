@@ -6,6 +6,7 @@ import {
 	faTiktok,
 	faWhatsapp,
 	faXTwitter,
+	faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import FullLogo from "../assets/images/nebest-full-logo.svg";
 import BgImg from "../assets/images/headerBgImg.svg";
@@ -304,6 +305,13 @@ const Header = () => {
 					aria-label="Link to Facebook page"
 				>
 					<FontAwesomeIcon icon={faFacebookF} size="2x" />
+				</a>
+				<a
+					href="https://www.youtube.com/@NebestFitness"
+					target="_blank"
+					aria-label="Link to Youtube page"
+				>
+					<FontAwesomeIcon icon={faYoutube} size="2x" />
 				</a>
 			</SocialMediaBox>
 		</HeaderBox>
