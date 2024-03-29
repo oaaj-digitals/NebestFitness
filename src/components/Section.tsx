@@ -15,13 +15,11 @@ interface StyledComponentProps {
 	height?: string;
 	scrollSnapAlign?: boolean;
 	$padding?: string;
-	flexDirection?: string;
+	direction?: string;
 }
 
 const SectionBox = s.section<StyledComponentProps>`
     width: 100%;
-	max-height:  ${({ height }: StyledComponentProps) =>
-		height || "clac(100vh - 8rem)"};
 	height: max-content;
     padding: ${({ $padding }: StyledComponentProps) =>
 		$padding || "12rem 6rem 0rem"};
@@ -61,8 +59,8 @@ const SectionMain = s.div<StyledComponentProps>`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-	flex-direction: ${({ flexDirection }: StyledComponentProps) =>
-		flexDirection !== "" || null ? flexDirection : "row"};
+	flex-direction: ${({ direction }: StyledComponentProps) =>
+		direction !== "" || null ? direction : "row"};
 
 `;
 
@@ -83,7 +81,7 @@ const Section = ({
 				</SectionTitleBox>
 			) : null}
 
-			<SectionMain flexDirection={flexDirection}>{children}</SectionMain>
+			<SectionMain direction={flexDirection}>{children}</SectionMain>
 		</SectionBox>
 	);
 };

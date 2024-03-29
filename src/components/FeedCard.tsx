@@ -3,7 +3,7 @@ import { Feed } from "../hooks/useFeeds";
 import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
-	feed: Feed;
+    feed: Feed;
 }
 
 const Card = s.a`
@@ -59,19 +59,19 @@ const Caption = s.p`
 `;
 
 const FeedCard = ({ feed }: Props) => {
-	const caption = feed.caption.substring(0, 100);
-	return (
-		<Card href={feed.permalink} target="_blank" rel="noopener noreferrer">
-			<img
-				src={feed.thumbnail_url || feed.media_url}
-				alt=""
-				loading="lazy"
-			/>
-			<Caption className="caption">
-				{feed.caption && caption + "..."}
-			</Caption>
-		</Card>
-	);
+    const caption = feed.caption.substring(0, 100);
+    return (
+        <Card href={feed.permalink || feed.media_url} target="_blank" rel="noopener noreferrer">
+            <img
+                src={feed.thumbnail_url || feed.media_url}
+                alt=""
+                loading="lazy"
+            />
+            <Caption className="caption">
+                {feed.caption && caption + "..."}
+            </Caption>
+        </Card>
+    );
 };
 
 export default FeedCard;

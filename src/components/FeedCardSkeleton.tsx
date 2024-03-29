@@ -2,11 +2,11 @@ import { styled as s, keyframes } from "styled-components";
 import { breakpoints } from "../services/design-breakpoints";
 
 interface Props {
-	error?: string;
+    error?: string;
 }
 
 interface styleProps {
-	error?: string;
+    error?: string;
 }
 
 const loadinFades = keyframes`
@@ -34,7 +34,7 @@ const Card = s.div<styleProps>`
     background: linear-gradient(to bottom right, var(--color-red) 0%, transparent 100%);
 
     animation: ${({ error }: styleProps) =>
-		error === "" ? loadinFades : ""} 1s ease-in-out infinite alternate;
+        error === "" ? loadinFades : ""} 1s ease-in-out infinite alternate;
     animation-fill-mode: forwards;
 
     @media (max-width: ${breakpoints.phone}) {
@@ -58,13 +58,13 @@ const Caption = s.div`
 `;
 
 const FeedCardSkeleton = ({ error }: Props) => {
-	return (
-		<Card>
-			{error &&
-				"Oops! Something went on our end. Apologies for the inconvenience."}
-			<Caption></Caption>
-		</Card>
-	);
+    return (
+        <Card>
+            {error &&
+                "Oops! Something went wrong. Apologies for the inconvenience."}
+            <Caption></Caption>
+        </Card>
+    );
 };
 
 export default FeedCardSkeleton;

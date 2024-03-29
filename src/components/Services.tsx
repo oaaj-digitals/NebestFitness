@@ -13,7 +13,7 @@ import { breakpoints } from "../services/design-breakpoints";
 
 const ServicesBox = s.div`
     width: 100%;
-    height: 90%;
+    height: max-content;
     
     display: grid;
     grid-template-columns: repeat(3, 23rem);
