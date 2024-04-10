@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --default-font-size: 1.6rem;
+  --primary-heading: 800 9rem var(--font-oxanium), "Trebuchet MS";
+  --secondary-heading: 700 3rem var(--font-oxanium), "Trebuchet MS";
+  --tertiary-heading: 600 1.6rem var(--font-oxanium), "Trebuchet MS";
+
+  --color-white: #f5f5f5;
+  --color-black: #080808;
+  --color-gray: #1e1e1e;
+  --color-red: #c62020;
+
+  --phone: "37.5em";
+  --tabPort: "56.25em";
+  --tabLand: "75em";
+  --bigScreen: "122.5em";
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: var(--font-oxanium), "Trebuchet MS";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  font-size: var(--default-font-size);
+  line-height: 1.5;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+body > * {
+  width: 100%;
+  padding: 0 3vw;
+}
+
+body > *:nth-child(2) {
+  margin-top: 7rem;
+}
+
+body::-webkit-scrollbar {
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar-button {
+  background-color: #80808075;
+}
+
+body::-webkit-scrollbar-button:active {
+  background-color: #44444475;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #80808050;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #80808075;
+}
+
+#root {
+  width: 100%;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+a {
+  font: inherit;
+  display: inline-block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--color-red);
+}
+
+li {
+  list-style: none;
+}
+
+.underline {
+  width: 60%;
+  height: 5px;
+  background-color: var(--color-red);
+}
+
+/* Media Breakpoints */
+/* 
+	0	- 600px(37.5em): 		Phones
+	600 - 900px(56.25em): 		Tablet portriat
+	900 - 1200px(75em): 		Tablet landscape	
+*/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px*/
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%; /* 1rem = 8px*/
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 46.88%; /* 1rem = 7.5px*/
+  }
+
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
