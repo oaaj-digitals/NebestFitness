@@ -1,0 +1,23 @@
+.section {
+  width: 100%;
+  flex-direction: column;
+  gap: 4rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceContainer {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5rem;
+  background-image: url("../../../assets/images/logo-pattern-red.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

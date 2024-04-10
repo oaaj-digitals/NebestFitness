@@ -1,0 +1,25 @@
+.heroSection {
+  display: block;
+  width: 100%;
+  height: 30rem;
+
+  background-position: top;
+  background-size: cover;
+  margin-top: 0;
+  padding: 0;
+}
+
+.heroSectionImg {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.35;
+}
+
+.heading {
+  position: absolute;
+  left: 3vw;
+  bottom: 1rem;
+}
