@@ -25,6 +25,16 @@
   line-height: 0.9;
 }
 
+.socials {
+  position: absolute;
+  bottom: 5vh;
+  right: 6vw;
+
+  display: flex;
+  gap: 4rem;
+  align-self: flex-end;
+}
+
 @media (max-width: 56.25em) {
   .section {
     height: calc(100svh - 7rem);
@@ -41,5 +51,12 @@
 
   .container > p {
     width: 115%;
+  }
+
+  .socials {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    right: 0;
   }
 }
