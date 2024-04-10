@@ -80,7 +80,7 @@
 @media (max-width: 56.25em) {
   .container {
     width: 100%;
-    height: max-content;
+    height: fit-content !important;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(26, calc(100vw / 8));
   }
