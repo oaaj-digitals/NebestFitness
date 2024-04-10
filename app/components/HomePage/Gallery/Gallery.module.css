@@ -1,15 +1,12 @@
 .section {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .container {
-  width: 90%;
-  height: calc(100vw / 3.2);
+  width: 100%;
+  height: calc(100vw / 2.9);
   max-height: 100%;
-  margin-top: 2rem;
 
   display: grid;
   justify-content: center;
