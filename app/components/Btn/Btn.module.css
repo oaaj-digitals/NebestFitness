@@ -1,0 +1,39 @@
+.Btn {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.Btn:hover {
+  color: var(--color-white) !important;
+}
+
+.bg {
+  display: block;
+  width: 130%;
+  height: 100%;
+  background: var(--color-red);
+
+  position: absolute;
+  top: 0;
+  right: 60%;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+
+  transition: all 0.3s ease-in;
+}
+
+.Btn:hover .bg {
+  right: -15%;
+}
+
+@media (max-width: 56.25em) {
+  .bg {
+    right: 0%;
+  }
+}

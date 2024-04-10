@@ -1,0 +1,43 @@
+.section {
+  height: calc(100vh - 7rem);
+
+  background-image: url("../../../assets/images/headerBgImg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 4vw;
+  transform: translateY(-50%);
+
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.heading {
+  line-height: 0.9;
+}
+
+@media (max-width: 56.25em) {
+  .section {
+    height: calc(100svh - 7rem);
+  }
+
+  .container {
+    position: static;
+    transform: translateY(0%);
+    width: 100%;
+    padding: 0 15vw;
+    text-align: center;
+    align-items: center;
+  }
+
+  .container > p {
+    width: 115%;
+  }
+}
