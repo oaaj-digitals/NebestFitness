@@ -20,7 +20,7 @@ const ServiceSection = () => {
 
       <div className={styles.serviceContainer}>
         {
-          services.map(service => <ServiceCard title={service.title} image={service.image} />)
+          services.map(service => <ServiceCard title={service.title} image={service.image} key={service.id} />)
         }
       </div>
 
