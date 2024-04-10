@@ -4,6 +4,8 @@
   background-image: url("../../../assets/images/headerBgImg.svg");
   background-size: cover;
   background-position: center;
+
+  margin-top: 0;
 }
 
 .container {
