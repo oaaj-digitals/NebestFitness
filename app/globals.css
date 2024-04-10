@@ -36,6 +36,8 @@ body {
   line-height: 1.5;
   background-color: var(--color-black);
   color: var(--color-white);
+
+  padding-top: 7rem;
 }
 
 header,
@@ -43,10 +45,6 @@ main > *,
 footer {
   width: 100%;
   padding: 0 3vw;
-}
-
-body > *:nth-child(2) {
-  margin-top: 7rem;
 }
 
 body::-webkit-scrollbar {
