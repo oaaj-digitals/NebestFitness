@@ -24,42 +24,42 @@ const Footer = () => {
           target="_blank"
           aria-label="Link to Instagram account"
         >
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon size="xl" icon={faInstagram} />
         </Link>
         <Link
           href="https://wa.me/message/JX6TOLTPPD26J1"
           target="_blank"
           aria-label="Link to Whatsapp account"
         >
-          <FontAwesomeIcon icon={faWhatsapp} />
+          <FontAwesomeIcon size="xl" icon={faWhatsapp} />
         </Link>
         <Link
           href="https://x.com/nebestfitness"
           target="_blank"
           aria-label="Link to X(Twitter) account"
         >
-          <FontAwesomeIcon icon={faXTwitter} />
+          <FontAwesomeIcon size="xl" icon={faXTwitter} />
         </Link>
         <Link
           href="https://tiktok.com/@nebestfitness"
           target="_blank"
           aria-label="Link to TikTok account"
         >
-          <FontAwesomeIcon icon={faTiktok} />
+          <FontAwesomeIcon size="xl" icon={faTiktok} />
         </Link>
         <Link
           href="https://facebook.com/profile.php?id=100078758541400"
           target="_blank"
           aria-label="Link to Facebook page"
         >
-          <FontAwesomeIcon icon={faFacebookF} />
+          <FontAwesomeIcon size="xl" icon={faFacebookF} />
         </Link>
         <Link
           href="https://www.youtube.com/@NebestFitness"
           target="_blank"
           aria-label="Link to Youtube page"
         >
-          <FontAwesomeIcon icon={faYoutube} />
+          <FontAwesomeIcon size="xl" icon={faYoutube} />
         </Link>
       </div>
 
