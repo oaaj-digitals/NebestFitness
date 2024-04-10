@@ -85,6 +85,17 @@ section:last-child {
   margin-bottom: 5rem;
 }
 
+section > .titleBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section > .titleBox.right {
+  align-items: flex-end;
+}
+
 a {
   font: inherit;
   display: inline-block;
@@ -118,7 +129,7 @@ li {
   font-size: 3rem;
 }
 
-.secondary-heading {
+.tertiary-heading {
   font-weight: 600;
   font-size: 1.6rem;
 }
