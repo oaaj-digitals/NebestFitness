@@ -14,7 +14,7 @@ export interface Feed {
 }
 
 const Feeds = async () => {
-  const accessToken = process.env.VITE_USER_ACCESS_TOKEN;
+  const accessToken = process.env.USER_ACCESS_TOKEN;
   const apiVersion = "v18.0";
   const baseUrl = `https://graph.instagram.com/${apiVersion}`;
 
