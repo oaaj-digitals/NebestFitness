@@ -13,7 +13,7 @@ const ServiceSection = () => {
 
       <div className='titleBox left'>
         <div>
-          <h3 className='secondary-heading'>Services</h3>
+          <h3 className='secondary-heading'>Our Services</h3>
           <div className="underline"></div>
         </div>
       </div>

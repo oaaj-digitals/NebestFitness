@@ -54,13 +54,14 @@ const Feeds = async () => {
         )}
       </div>
 
-      <Btn
-        style={{ alignSelf: "flex-end" }}
-        link="https://instagram.com/nebestfitness"
-      >
-        <p>Follow for more</p>
-        <FontAwesomeIcon icon={faInstagram} size="xl" />
-      </Btn>
+      <div className={styles.btn}>
+        <Btn
+          link="https://instagram.com/nebestfitness"
+        >
+          <p>Follow for more</p>
+          <FontAwesomeIcon icon={faInstagram} size="xl" />
+        </Btn>
+      </div>
     </section>
   );
 };

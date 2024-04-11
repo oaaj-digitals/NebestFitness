@@ -37,7 +37,9 @@
 
 @media (max-width: 56.25em) {
   .section {
-    height: calc(100svh - 7rem);
+    min-height: calc(100svh - 7rem);
+    height: fit-content;
+    padding: 15vw 0;
   }
 
   .container {

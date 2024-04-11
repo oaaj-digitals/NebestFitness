@@ -4,6 +4,7 @@ import personalTrainingImg from "../assets/images/personal-training.png";
 import nutritionImg from "../assets/images/brooke-lark-nTZOILVZuOg-unsplash (2).jpg";
 import martialArtImg from "../assets/images/mark-adriane-FH6JcaCrYJ0-unsplash (2).jpg";
 import selfDefenseImg from "../assets/images/samuel-castro-cwScwJy5HQE-unsplash (2).jpg";
+import onlineTrainingImg from "../assets/images/online-fitness.jpg";
 
 export interface Service {
   id?:number;
@@ -19,7 +20,7 @@ const services : Service[] = [
   },
   {
     id:2,
-    title: "Nutrition",
+    title: "Nutrition Plan",
     image: nutritionImg,
   },
   {
@@ -35,7 +36,7 @@ const services : Service[] = [
   {
     id:5,
     title: "Online Training",
-    image: selfDefenseImg,
+    image: onlineTrainingImg,
   },
 ]
 

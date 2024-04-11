@@ -9,3 +9,13 @@
   gap: 4rem;
   flex-wrap: wrap;
 }
+
+.btn {
+  align-self: flex-end;
+}
+
+@media (max-width: 37em) {
+  .btn {
+    align-self: center;
+  }
+}
