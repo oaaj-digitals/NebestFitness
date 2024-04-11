@@ -24,12 +24,12 @@ const Testimonials = () => {
       <div className={styles.container}>
         <TestimonialCard>
           <p>
-            Since I’ve started using nebestfitness, I look
+            Since I&apos;ve started using nebestfitness, I look
             forward to my coaching session each week. The
-            improvements I’ve made have come from clear
+            improvements I&apos;ve made have come from clear
             instructions with a particular emphasis on great
             technique, to build a solid foundation to work from.
-            I can already see how much progress I’ve made from
+            I can already see how much progress I&apos;ve made from
             working with Emmanuel and am looking forward to
             seeing where I can take it with his help.
           </p>
@@ -40,7 +40,7 @@ const Testimonials = () => {
           <p>
             Emmy is a professional and meticulous coach. In the
             first month of his training, my muscles grew by 6kg,
-            thanks to Emmy's flexible and targeted training.
+            thanks to Emmy&apos;s flexible and targeted training.
             Emmy has a thorough understanding of human muscles,
             which makes his private courses very efficient.
           </p>
@@ -49,7 +49,7 @@ const Testimonials = () => {
 
         <TestimonialCard>
           <p>
-            Emmanuel’s dynamic approach to fitness is truly
+            Emmanuel&apos;s dynamic approach to fitness is truly
             refreshing. His customized workouts are designed to
             be engaging and varied, ensuring that every session
             brings something new to the table. From strength
@@ -62,13 +62,13 @@ const Testimonials = () => {
 
         <TestimonialCard>
           <p>
-            As a combat instructor, Emmanuel’s expertise in
+            As a combat instructor, Emmanuel&apos;s expertise in
             martial arts has transformed my skills
             significantly. The focus on speed, body
             coordination, and overall technique has elevated my
             performance to new heights. His motivational
             coaching style inspires me to give my best in every
-            session. I can’t believe how far I’ve come since I
+            session. I can&apos;t believe how far I&apos;ve come since I
             started. I feel i am better prepared to face the
             world thanks to his guidance and support.
           </p>
