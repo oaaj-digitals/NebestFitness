@@ -17,8 +17,8 @@ const FeedCard = ({ feed }: Props) => {
         alt=""
         loading="lazy"
         className={styles.img}
-        width={1000}
-        height={1800}
+        width={600}
+        height={1080}
       />
       <p className={styles.caption}>
         {feed.caption && caption + "..."}
