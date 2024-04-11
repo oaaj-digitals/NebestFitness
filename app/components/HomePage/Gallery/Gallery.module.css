@@ -6,7 +6,7 @@
 
 .container {
   width: 100%;
-  height: calc(100vw / 2.9);
+  height: calc(100vw / 2.5);
   max-height: fit-content;
 
   display: grid;
@@ -53,6 +53,12 @@
 .item4 {
   grid-column: 1 / span 2;
   grid-row: 5 / span 4;
+}
+
+.item4 > video {
+  object-fit: contain;
+  object-position: center;
+  scale: 1.05;
 }
 
 .item5 {
