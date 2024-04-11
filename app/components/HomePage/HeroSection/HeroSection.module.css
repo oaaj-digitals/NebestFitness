@@ -1,7 +1,7 @@
 .section {
   height: calc(100vh - 7rem);
 
-  background-image: url("../../../assets/images/headerBgImg.svg");
+  background-image: url("../../../assets/images/headerBgImg.png");
   background-size: cover;
   background-position: center;
 

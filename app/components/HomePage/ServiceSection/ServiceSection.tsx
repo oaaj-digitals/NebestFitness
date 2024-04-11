@@ -1,9 +1,5 @@
-import Image from 'next/image';
 import styles from "./ServiceSection.module.css";
 import Btn from '../../Btn/Btn';
-
-import Link from 'next/link';
-
 import services from '@/app/utilis/services';
 import ServiceCard from '../../ServiceCard/ServiceCard';
 

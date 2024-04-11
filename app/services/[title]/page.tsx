@@ -1,5 +1,4 @@
 import services from "@/app/utilis/services";
-import Image from "next/image";
 import ServicePageContent from "@/app/components/ServicePage/ServicePage";
 
 interface Props {
