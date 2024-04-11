@@ -1,4 +1,5 @@
 import AboutSection from "./components/HomePage/AboutSection/AboutSection";
+import Contact from "./components/HomePage/Contact/Contact";
 import Feeds from "./components/HomePage/Feeds/Feeds";
 import Gallery from "./components/HomePage/Gallery/Gallery";
 import HeroSection from "./components/HomePage/HeroSection/HeroSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <Gallery />
       <Feeds />
       <Testimonials />
+      <Contact />
     </main>
   );
 }
