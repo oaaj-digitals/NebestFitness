@@ -1,0 +1,11 @@
+.section {
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.feedsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
