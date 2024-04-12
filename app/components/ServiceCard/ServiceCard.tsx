@@ -7,7 +7,8 @@ interface Props extends Service {
 }
 
 const ServiceCard = ({ title, image }: Props) => {
-  const generatedLink = title.toLowerCase().replace(" ", "_");
+  const generatedLink = title.toLowerCase().replace(/\s/g, "_");
+
   return (
     <Link href={`/services/${generatedLink}`} className={styles.serviceCard}>
       <Image

@@ -13,7 +13,7 @@ const ServiceDetailPage = ({ params: { title } }: Props) => {
       {
         services.map(
           service => (
-            service.title.toLowerCase().replace(" ", "_") == title ? <ServicePageContent service={service} key={service.id} /> : null
+            service.title.toLowerCase().replace(/\s/g, "_") == title ? <ServicePageContent service={service} key={service.id} /> : null
           )
         )
       }

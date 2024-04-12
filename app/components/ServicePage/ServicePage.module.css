@@ -23,3 +23,27 @@
   left: 3vw;
   bottom: 1rem;
 }
+
+.description {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mediaBox {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.media {
+  width: 33rem;
+  height: 38rem;
+  object-fit: cover;
+}
+
+.packages {
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
