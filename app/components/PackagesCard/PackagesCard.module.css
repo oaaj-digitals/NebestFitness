@@ -1,0 +1,39 @@
+.packagesCard {
+  width: 33rem;
+  padding: 2rem 3rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.packagesCard ul {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.packagesCard li {
+  list-style-type: circle;
+}
+
+.amt {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.amt > span {
+  font-size: 0.6em;
+  font-weight: 400;
+}
