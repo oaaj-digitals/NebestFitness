@@ -1,19 +1,21 @@
 import { StaticImageData } from "next/image";
 
 import personalTrainingImg from "../assets/images/personal-training.png";
-import personalTrainingImg2 from "../assets/images/rinke-dohmen-dKN_i-opwVw-unsplash (1).jpg";
+import personalTrainingImg2 from "../assets/images/pTrain1.jpg";
+import personalTrainingImg3 from "../assets/images/Image-2.png";
 
 import nutritionImg from "../assets/images/brooke-lark-nTZOILVZuOg-unsplash (2).jpg";
 import nutritionImg2 from "../assets/images/eugene-Xk0jQPZseMk-unsplash.jpg";
 import nutritionImg3 from "../assets/images/nadine-primeau-l5Mjl9qH8VU-unsplash.jpg";
 
 import martialArtImg from "../assets/images/mark-adriane-FH6JcaCrYJ0-unsplash (2).jpg";
-import martialArtImg2 from "../assets/images/jonathan-borba-Yf1SegAI84o-unsplash.jpg";
-import martialArtImg3 from "../assets/images/jesse-van-vliet-hFrHNE-VbFs-unsplash.jpg";
+import martialArtImg2 from "../assets/images/martialArt1.jpg";
+import martialArtImg3 from "../assets/images/martialArt2.jpg";
 
 import selfDefenseImg from "../assets/images/samuel-castro-cwScwJy5HQE-unsplash (2).jpg";
-import selfDefenseImg2 from "../assets/images/gold-bjj-vQnlu9EUBDo-unsplash (1).jpg";
+import selfDefenseImg2 from "../assets/images/selfDefense.jpg";
 import selfDefenseImg3 from "../assets/images/nathan-dumlao-QMhc3D_zwJ0-unsplash.jpg";
+import selfDefenseImg4 from "../assets/images/selfDefense2.png";
 
 import onlineTrainingImg from "../assets/images/online-fitness.jpg";
 import onlineTrainingImg2 from "../assets/images/full-shot-man-doing-plank.jpg";
@@ -21,7 +23,6 @@ import onlineTrainingImg3 from "../assets/images/full-shot-woman-working-out.jpg
 
 import thumbnail1 from "../assets/images/vThumb (7).png";
 import thumbnail2 from "../assets/images/vThumb (3).png";
-import { title } from "process";
 
 export type Media = {
   src: string | StaticImageData;
@@ -42,6 +43,7 @@ export interface Service {
   description?: string | string[];
   media?: Media[];
   packages?: Packages[];
+  iframe?: string;
 }
 
 const services : Service[] = [
@@ -55,7 +57,7 @@ const services : Service[] = [
     ],
     media: [
       {
-        src: personalTrainingImg,
+        src: personalTrainingImg3,
         type: "image"
       },
       {
@@ -67,7 +69,37 @@ const services : Service[] = [
         src: personalTrainingImg2,
         type: "image"
       },
-    ]
+    ],
+    packages: [
+      {
+        title: "1 Session",
+        amount: "£50"
+      },
+      {
+        title: "4 Sessions",
+        amount: "£200"
+      },
+      {
+        title: "8 Sessions",
+        amount: "£400"
+      },
+      {
+        title: "12 Sessions",
+        benefits:"<p class='text-center'>( 3 time a week )</p>",
+        amount: "£540"
+      },
+      {
+        title: "Partner Sessions",
+        benefits:"<p class='text-center'>( 2 to 1 )</p>",
+        amount: "£60"
+      },
+      {
+        title: "Partner Sessions Programme",
+        benefits:"<p class='text-center'>( 7 Sessions )</p>",
+        amount: "£400"
+      },
+    ],
+    iframe: "https://pdfbwss34k5.typeform.com/to/Cf2YXHll?typeform-source=linktr.ee",
   },
 
   {
@@ -91,7 +123,25 @@ const services : Service[] = [
         src: nutritionImg,
         type: "image"
       },
-    ]
+    ],
+    packages: [
+      {
+        title: "Standard Plan",
+        benefits: "Perfect for individuals looking for a balanced diet with a mix of plant-based and animal-based options.",
+        amount: "£80<span>/month</span>"
+      },
+      {
+        title: "Vegetarian Plan",
+        benefits: "Ideal for those who prefer a plant-based diet without any animal products.",
+        amount: "£100<span>/month</span>"
+      },
+      {
+        title: "Vegan Plan",
+        benefits: "Designed for individuals who follow a strictly plant-based diet, excluding all animal products.",
+        amount: "£120<span>/month</span>"
+      },
+    ],
+    iframe: "https://pdfbwss34k5.typeform.com/to/eoWkqbE2",
   },
 
   {
@@ -116,7 +166,30 @@ const services : Service[] = [
         src: martialArtImg3,
         type: "image"
       },
-    ]
+    ],
+    packages: [
+      {
+        title: "1 to 1 Kick Boxing",
+        benefits:"<p class='text-center'>( 1 Session )</p>",
+        amount: "£60"
+      },
+      {
+        title: "1 to 1 Boxing",
+        benefits:"<p class='text-center'>( 1 Session )</p>",
+        amount: "£55"
+      },
+      {
+        title: "Partner Sessions",
+        benefits:"<p class='text-center'>( 1 Session )</p>",
+        amount: "£80"
+      },
+      {
+        title: "Partner Sessions Programme",
+        benefits:"<p class='text-center'>( 7 Sessions )</p>",
+        amount: "£500"
+      },
+    ],
+    iframe: "https://pdfbwss34k5.typeform.com/to/Cf2YXHll?typeform-source=linktr.ee",
   },
 
   {
@@ -129,7 +202,7 @@ const services : Service[] = [
     ],
     media: [
       {
-        src: selfDefenseImg,
+        src: selfDefenseImg4,
         type: "image"
       },
       {
@@ -140,14 +213,27 @@ const services : Service[] = [
         src: selfDefenseImg3,
         type: "image"
       },
-    ]
+    ],
+    packages: [
+      {
+        title: "45mins Session",
+        // benefits:"<p class='text-center'>( 7 Sessions )</p>",
+        amount: "£50"
+      },
+      {
+        title: "Block Sessions",
+        benefits:"<p class='text-center'>( £5 discount for multiple sessions )</p>",
+        amount: "£45"
+      },
+    ],
+    iframe: "https://pdfbwss34k5.typeform.com/to/Cf2YXHll?typeform-source=linktr.ee",
   },
   
   {
     id:5,
     title: "Online Training",
     image: onlineTrainingImg,
-    description:"We offer three comprehensive packages to support you on your fitness journey:",
+    description:"Are you ready to transform your body and conquer your fitness goals? Feeling lost on where to begin? NebestFitness has the answer! We offer personalized online training plans for all levels, with three comprehensive packages designed to guide you every step of the way.",
     media: [
       {
         src: onlineTrainingImg3,
@@ -165,7 +251,7 @@ const services : Service[] = [
     packages: [
       {
         title: "Bronze Package",
-        benefits: "A Personalized workout plan tailored to your goals",
+        benefits: "<ul><li>A Personalized workout plan tailored to your goals</li></ul>",
         amount: "£100<span>/month</span>"
       },
       {
@@ -178,7 +264,8 @@ const services : Service[] = [
         benefits: "<ul><li>Personalized workout plan</li><li>Customized nutrition plan</li> <li>Minimum of 4-hour response time to any questions or inquiries</li><li>Weekly or bi-weekly Zoom calls for personalized coaching and goal refinement</li></ul>",
         amount: "£200<span>/month</span>"
       },
-    ]
+    ],
+    iframe: "https://pdfbwss34k5.typeform.com/to/Cf2YXHll?typeform-source=linktr.ee",
   },
 ]
 

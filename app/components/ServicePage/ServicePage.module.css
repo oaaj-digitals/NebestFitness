@@ -47,3 +47,29 @@
   flex-wrap: wrap;
   gap: 3rem;
 }
+
+.iframeBox {
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.iframe {
+  width: 100%;
+  height: calc(100vh - 20rem);
+}
+
+.pmtBtn {
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.pmtBtn a {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 56.25em) {
+  .iframe {
+    height: calc(100svh - 20rem);
+  }
+}

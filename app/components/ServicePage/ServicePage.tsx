@@ -3,6 +3,7 @@ import styles from "./ServicePage.module.css";
 import Image from "next/image";
 import PackagesCard from "../PackagesCard/PackagesCard";
 import ServiceMedia from "../ServiceMedia/ServiceMedia";
+import Btn from "../Btn/Btn";
 
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
 }
 
 const ServicePageContent = ({
-  service: { title, image, description, media, packages }
+  service: { title, image, description, media, packages, iframe }
 }: Props) => {
   return (
     <>
@@ -46,7 +47,7 @@ const ServicePageContent = ({
         <section className={styles.packages}>
           <div className='titleBox left'>
             <div>
-              <h3 className='secondary-heading'>Price List</h3>
+              <h3 className='secondary-heading'>{title} Packages</h3>
               <div className="underline"></div>
             </div>
           </div>
@@ -64,6 +65,30 @@ const ServicePageContent = ({
           }
         </section>
       }
+
+      {
+        packages &&
+        <section className={styles.pmtBtn}>
+          <Btn link="/payment" blank>Pay Now</Btn>
+        </section>
+      }
+
+      {
+        iframe &&
+        <section className={styles.iframeBox}>
+          <div className='titleBox left'>
+            <div>
+              <h3 className='secondary-heading'>Consultation Form</h3>
+              <div className="underline"></div>
+            </div>
+          </div>
+          <iframe
+            src={iframe}
+            className={styles.iframe}
+            allowFullScreen />
+        </section>
+      }
+
     </>
   );
 };

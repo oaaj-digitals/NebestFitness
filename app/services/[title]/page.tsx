@@ -5,7 +5,13 @@ interface Props {
   params: { title: string; };
 }
 
+export async function generateStaticParams() {
 
+  // Extract service titles from your data
+  const servicesTitle = services.map((service) => service["title"].toLowerCase().replace(/\s/g, "_"));
+
+  return servicesTitle.map((title) => ({ title: title }));
+}
 
 const ServiceDetailPage = ({ params: { title } }: Props) => {
   return (
