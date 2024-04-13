@@ -14,6 +14,10 @@ const ServiceSection = () => {
         </div>
       </div>
 
+      <div>
+        <p>We offer a wild range of services, including personalized training, nutrition guidance, martial art training, self-defense techniques, and convenient online coaching. Click on each option to discover how we can help you achieve your fitness goals.</p>
+      </div>
+
       <div className={styles.serviceContainer}>
         {
           services.map(service => <ServiceCard title={service.title} image={service.image} key={service.id} />)
