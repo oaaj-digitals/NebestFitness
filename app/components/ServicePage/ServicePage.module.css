@@ -70,6 +70,7 @@
 
 @media (max-width: 56.25em) {
   .iframe {
-    height: calc(100svh - 20rem);
+    height: 90rem;
+    max-height: calc(100svh - 13rem);
   }
 }

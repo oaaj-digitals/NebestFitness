@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <Image src={Logo} alt="NebestFitness Logo" className={styles.logo} />
+        <Image src={Logo} alt="NebestFitness Logo" className={styles.logo} priority />
       </Link>
 
       <div className={styles.navBox}>
