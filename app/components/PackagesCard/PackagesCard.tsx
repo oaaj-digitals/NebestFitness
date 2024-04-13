@@ -6,8 +6,8 @@ const PackagesCard = ({ title, benefits, amount }: Packages) => {
   return (
     <div className={styles.packagesCard}>
       <h3 className={styles.title}>{title}</h3>
-      {benefits && <p dangerouslySetInnerHTML={{ __html: benefits }}>
-      </p>}
+      {benefits && <div dangerouslySetInnerHTML={{ __html: benefits }}>
+      </div>}
       <p dangerouslySetInnerHTML={{ __html: amount }} className={styles.amt}></p>
     </div>
   );
