@@ -18,8 +18,6 @@ import selfDefenseImg3 from "../assets/images/nathan-dumlao-QMhc3D_zwJ0-unsplash
 import selfDefenseImg4 from "../assets/images/selfDefense2.png";
 
 import onlineTrainingImg from "../assets/images/online-fitness.jpg";
-import onlineTrainingImg2 from "../assets/images/full-shot-man-doing-plank.jpg";
-import onlineTrainingImg3 from "../assets/images/full-shot-woman-working-out.jpg";
 
 import thumbnail1 from "../assets/images/vThumb (7).png";
 import thumbnail2 from "../assets/images/vThumb (3).png";
@@ -169,7 +167,7 @@ const services : Service[] = [
     ],
     packages: [
       {
-        title: "1 to 1 Kick Boxing",
+        title: "1 to 1 Kick Boxing / Muay Thai",
         benefits:"<p class='text-center'>( 1 Session )</p>",
         amount: "£60"
       },
@@ -234,20 +232,6 @@ const services : Service[] = [
     title: "Online Training",
     image: onlineTrainingImg,
     description:"Are you ready to transform your body and conquer your fitness goals? Feeling lost on where to begin? NebestFitness has the answer! We offer personalized online training plans for all levels, with three comprehensive packages designed to guide you every step of the way.",
-    media: [
-      {
-        src: onlineTrainingImg3,
-        type: "image"
-      },
-      {
-        src: onlineTrainingImg2,
-        type: "image"
-      },
-      {
-        src: onlineTrainingImg,
-        type: "image"
-      },
-    ],
     packages: [
       {
         title: "Bronze Package",

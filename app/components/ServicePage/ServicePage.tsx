@@ -28,19 +28,21 @@ const ServicePageContent = ({
         }
       </section>
 
-      <section className={styles.mediaBox}>
-        {media && media.map(
-          medium => (
-            <ServiceMedia
-              src={medium["src"]}
-              type={medium["type"]}
-              thumbnail={medium["thumbnail"]}
-              id={media.indexOf(medium)}
-              key={media.indexOf(medium)}
-              title={title} />
-          )
-        )}
-      </section>
+      {
+        media &&
+        <section className={styles.mediaBox}>
+          {media.map(
+            medium => (
+              <ServiceMedia
+                src={medium["src"]}
+                type={medium["type"]}
+                thumbnail={medium["thumbnail"]}
+                id={media.indexOf(medium)}
+                key={media.indexOf(medium)}
+                title={title} />
+            )
+          )}
+        </section>}
 
       {
         packages &&

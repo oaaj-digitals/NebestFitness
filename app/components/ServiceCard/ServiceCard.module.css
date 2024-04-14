@@ -43,3 +43,10 @@
   background-color: rgba(0, 0, 0, 1);
   backdrop-filter: blur(5px);
 }
+
+@media (max-width: 37.5em) {
+  .serviceCard {
+    width: calc(85vw / 2.5);
+    height: calc(85vw / 3.5);
+  }
+}
