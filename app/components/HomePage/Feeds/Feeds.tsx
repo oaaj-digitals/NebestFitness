@@ -1,9 +1,13 @@
+"use client";
+
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Btn from '../../Btn/Btn';
 import styles from "./Feeds.module.css";
 import FeedCard from '../../FeedCard/FeedCard';
+import useSWR from 'swr';
+import FeedCardSkeleton from '../../FeedCardSkeleton/FeedCardSkeleton';
 
 export interface Feed {
   id: string;
@@ -13,18 +17,21 @@ export interface Feed {
   caption: string;
 }
 
-const Feeds = async () => {
-  const accessToken = process.env.USER_ACCESS_TOKEN;
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+const Feeds = () => {
+  const accessToken = process.env.NEXT_PUBLIC_USER_ACCESS_TOKEN;
   const apiVersion = "v18.0";
   const baseUrl = `https://graph.instagram.com/${apiVersion}`;
 
-
-  const res = await fetch(`${baseUrl}/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${accessToken}`, { cache: 'no-store' });
-  const fetchData = await res.json();
-
-  const feeds: Feed[] = fetchData["data"];
+  const { data, error, isLoading } = useSWR(
+    `${baseUrl}/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${accessToken}`,
+    fetcher
+  );
   const latestMedia = [0, 1, 2, 3];
+  let feeds: Feed[] = [];
 
+  if (!isLoading && !error) feeds = data["data"];
 
   return (
     <section id="feeds" className={styles.section}>
@@ -46,10 +53,13 @@ const Feeds = async () => {
       <div className={styles.feedsContainer}>
         {latestMedia.map((media) =>
         (
-          <FeedCard
-            key={media}
-            feed={feeds[media]}
-          ></FeedCard>
+          isLoading || error ? (
+            <FeedCardSkeleton key={media} error={error} isLoading={isLoading} />
+          ) :
+            (<FeedCard
+              key={media}
+              feed={feeds[media]}
+            ></FeedCard>)
         )
         )}
       </div>

@@ -10,7 +10,7 @@ const FeedCard = ({ feed }: Props) => {
   const caption = feed.caption.substring(0, 100);
 
   return (
-    <Link className={`${styles.card} ${feed ? null : styles.loading}`} href={feed.permalink || feed.media_url} target="_blank" rel="noopener noreferrer">
+    <Link className={styles.card} href={feed.permalink || feed.media_url} target="_blank" rel="noopener noreferrer">
       <img
         src={feed.thumbnail_url || feed.media_url}
         alt=""
