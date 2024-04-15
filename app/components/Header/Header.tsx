@@ -44,7 +44,7 @@ const Header = () => {
         <nav className={styles.nav} style={isMenuOpen ? { display: "flex" } : {}}>
           <Link
             className={styles.navLink}
-            href="/#header"
+            href="/"
             onClick={() => {
               handleMenuOpen(isMenuOpen);
             }}
@@ -98,7 +98,7 @@ const Header = () => {
           </Link>
           <Link
             className={styles.navLink}
-            href="/#blog"
+            href="/#feeds"
             onClick={() => {
               handleMenuOpen(isMenuOpen);
             }}

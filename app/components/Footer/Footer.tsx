@@ -9,13 +9,13 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <nav className={styles.nav}>
-        <Link href="/#header">Home</Link>
+        <Link href="/">Home</Link>
         <Link href="/#about-us">About Us</Link>
         <Link href="/#services">Services</Link>
         <Link href="/#gallery">Gallery</Link>
         <Link href="/#testimonials">Testimonials</Link>
         <Link href="/#contact-us">Contact Us</Link>
-        <Link href="/#blog">Blog</Link>
+        <Link href="/#feeds">Blog</Link>
       </nav>
 
       <div className={styles.socials}>
