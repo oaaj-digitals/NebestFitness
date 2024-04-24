@@ -53,7 +53,7 @@ const Header = () => {
           </Link>
           <Link
             className={styles.navLink}
-            href="/#about-us"
+            href="/about-us"
             onClick={() => {
               handleMenuOpen(isMenuOpen);
             }}

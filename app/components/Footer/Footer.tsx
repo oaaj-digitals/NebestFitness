@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <nav className={styles.nav}>
         <Link href="/">Home</Link>
-        <Link href="/#about-us">About Us</Link>
+        <Link href="/about-us">About Us</Link>
         <Link href="/#services">Services</Link>
         <Link href="/#gallery">Gallery</Link>
         <Link href="/#testimonials">Testimonials</Link>
