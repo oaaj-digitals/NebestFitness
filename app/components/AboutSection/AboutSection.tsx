@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./AboutSection.module.css";
-import aboutImage from "../../../assets/images/IMG_1377.jpg";
+import aboutImage from "../../assets/images/IMG_1377.jpg";
 
 const AboutSection = () => {
   return (
