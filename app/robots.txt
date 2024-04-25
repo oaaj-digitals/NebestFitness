@@ -1,5 +1,6 @@
 User-Agent: *
 Allow: /
 Disallow: /_next/
+Disallow: /private/
 
 Sitemap: https://nebestfitness.com/sitemap.xml

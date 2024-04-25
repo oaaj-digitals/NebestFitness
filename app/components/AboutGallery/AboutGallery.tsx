@@ -12,7 +12,7 @@ const AboutGallery = () => {
     <section className={styles.section}>
       <div className='titleBox left'>
         <div>
-          <h3 className='secondary-heading'>Behind the Scenes: See me in Action</h3>
+          <h3 className={`secondary-heading ${styles.heading}`}>Behind the Scenes: See me in Action</h3>
           <div className="underline"></div>
         </div>
       </div>
