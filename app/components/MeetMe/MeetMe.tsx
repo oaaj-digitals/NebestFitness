@@ -18,7 +18,7 @@ const MeetMe = ({ btn }: Props) => {
         <p className={styles.text}>
           <span>
             Imagine a life where strength and confidence flow through you and your body becomes a powerful tool, allowing you to achieve anything you set your mind to. That&apos;s the transformative power of fitness.
-            My journey began at a young age in West Africa, fueled by the discipline of taekwondo. This ignited a passion for health and fitness that has only grown stronger over time. My experience training with the military in martial arts further honed my skills as I hold 3 blackbelts in taekwondo, Judo &amp; kyokushin karate.
+            My journey began at a young age in West Africa, fueled by the discipline of taekwondo. This ignited a passion for health and fitness that has only grown stronger over time. My experience training with the military in martial arts further honed my skills as I hold 3 blackbelts in taekwondo, Judo &amp; kyokushin karate, with a masters degree in Education.
           </span>
           <span>
             Now, I leverage this knowledge to develop techniques and personalized approaches to help you reach your fitness goals. Whether you seek increased muscle mass, weight loss, sport-specific training, functional movement, or self-defense skills, I can guide you on your path.

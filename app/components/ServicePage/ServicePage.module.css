@@ -59,6 +59,8 @@
 }
 
 .pmtBtn {
+  display: flex;
+
   margin-top: 3rem;
   justify-content: center;
 }

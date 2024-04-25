@@ -41,7 +41,7 @@ body {
 }
 
 header,
-main > *,
+main>*,
 footer {
   width: 100%;
   padding: 0 4vw;
@@ -75,22 +75,22 @@ body::-webkit-scrollbar-thumb:hover {
 
 section {
   width: 100%;
-  margin-top: 5rem;
+  padding-top: 10rem;
   display: flex;
 }
 
 section:last-child {
-  margin-bottom: 5rem;
+  padding-bottom: 8rem;
 }
 
-section > .titleBox {
+section>.titleBox {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-section > .titleBox.right {
+section>.titleBox.right {
   align-items: flex-end;
 }
 
@@ -141,19 +141,22 @@ li {
 
 @media (max-width: 75em) {
   html {
-    font-size: 56.25%; /* 1rem = 9px*/
+    font-size: 56.25%;
+    /* 1rem = 9px*/
   }
 }
 
 @media (max-width: 56.25em) {
   html {
-    font-size: 50%; /* 1rem = 8px*/
+    font-size: 50%;
+    /* 1rem = 8px*/
   }
 }
 
 @media (max-width: 37.5em) {
   html {
-    font-size: 46.88%; /* 1rem = 7.5px*/
+    font-size: 46.88%;
+    /* 1rem = 7.5px*/
   }
 
   body {

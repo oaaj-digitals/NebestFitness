@@ -70,9 +70,9 @@ const ServicePageContent = ({
 
       {
         packages &&
-        <section className={styles.pmtBtn}>
-          <Btn link="/payment" blank>Pay Now</Btn>
-        </section>
+        <div className={styles.pmtBtn}>
+          <Btn link="/payment">Pay Now</Btn>
+        </div>
       }
 
       {
