@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import styles from "./PaymentPage.module.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://nebestfitness.com'),
+  title: "Payment"
+};
 
 const PaymentPage = () => {
   return (
