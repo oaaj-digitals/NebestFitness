@@ -1,0 +1,38 @@
+.section {
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+
+.video {
+  width: calc(100% / 3.4);
+  height: calc(100vw / 2.4);
+  max-height: calc(100vh - 20rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 37.5em) {
+
+  .container {
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .video {
+    width: calc(100% / 2.1);
+    height: calc(100vw / 1.6);
+    max-height: calc(100vh - 20rem);
+    object-fit: cover;
+    object-position: center;
+  }
+}
