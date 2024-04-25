@@ -52,6 +52,11 @@
 
 @media (max-width: 37.5em) {
 
+  .heading {
+    font-size: 2.1rem;
+    line-height: 1.5;
+  }
+
   .imgDiv {
     max-width: 100%;
   }

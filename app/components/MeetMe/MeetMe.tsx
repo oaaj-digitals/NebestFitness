@@ -12,7 +12,7 @@ const MeetMe = ({ btn }: Props) => {
     <section id='meetMe' className={styles.section}>
       <div className={styles.textContainer}>
         <div className={styles.headingBox} >
-          <h2 className={`secondary-heading`}>Meet Emmanuel  - Director / Head Coach</h2>
+          <h2 className={`secondary-heading ${styles.heading}`}>Meet Emmanuel  - Director / Head Coach</h2>
           <div className="underline"></div>
         </div>
         <p className={styles.text}>
