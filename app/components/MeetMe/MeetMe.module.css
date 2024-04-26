@@ -52,32 +52,13 @@
 
 @media (max-width: 56.25em) {
 
-  .imgDiv {
-    width: 50rem;
-    max-width: 80%;
-  }
-
-  .textContainer {
-    width: 100%;
-    order: -1;
-  }
-
-  .section {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .btnBox {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 37.5em) {
-
   .heading {
     font-size: 2.3rem;
     line-height: 1.5;
   }
+}
+
+@media (max-width: 37.5em) {
 
   .imgDiv {
     max-width: 100%;
@@ -88,13 +69,22 @@
     order: -1;
   }
 
+  .headingBox {
+    align-self: center;
+  }
+
   .text {
     padding: 0 2rem;
     gap: 1rem;
     text-align: center;
   }
 
-  .headingBox {
-    align-self: center;
+  .section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .btnBox {
+    justify-content: center;
   }
 }
