@@ -1,6 +1,6 @@
 import AboutSection from "./components/AboutSection/AboutSection";
 import Contact from "./components/HomePage/Contact/Contact";
-import Feeds from "./components/HomePage/Feeds/Feeds";
+import Feeds from "./components/HomePage/Feeds/newFeeds";
 import Gallery from "./components/HomePage/Gallery/Gallery";
 import HeroSection from "./components/HomePage/HeroSection/HeroSection";
 import ServiceSection from "./components/HomePage/ServiceSection/ServiceSection";
@@ -15,7 +15,7 @@ export default function Home() {
       <MeetMe btn />
       <ServiceSection />
       <Gallery />
-      {/* <Feeds /> */}
+      <Feeds />
       <Testimonials />
       <Contact />
     </main>
