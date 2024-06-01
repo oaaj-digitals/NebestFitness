@@ -15,7 +15,7 @@ export default function Home() {
       <MeetMe btn />
       <ServiceSection />
       <Gallery />
-      <Feeds />
+      {/* <Feeds /> */}
       <Testimonials />
       <Contact />
     </main>
