@@ -3,6 +3,7 @@ import { Oxanium } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import GoogleAnayticsScript from "./GoogleAnayticsScript";
 
 const oxanium = Oxanium({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <GoogleAnayticsScript />
       <body className={`${oxanium.variable}`}>
         <Header />
         {children}
