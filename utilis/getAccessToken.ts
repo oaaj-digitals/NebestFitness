@@ -11,20 +11,21 @@ interface DbSchema extends APIResponse {
 }
 
 const renewable =(modified_at:any,expires_in:number) =>{
-  console.log('Renew Triggered');
+  
   const today = new Date()
   const todayInNum = today.getTime()
   let isValid = false; 
 
   const renew_time = expires_in + parseInt(modified_at) - 604800000
-   
-  if (renew_time <= todayInNum) isValid = true;
+
+
+  if (renew_time > todayInNum) isValid = true;
   
   return isValid;
 }
 
 const storeNewToken = async (data:APIResponse) => {
-  console.log('Store Triggered');
+  
   const today = new Date();
   const todayInNum = today.getTime()
 
@@ -44,7 +45,7 @@ const storeNewToken = async (data:APIResponse) => {
 }
 
 const refreshToken = async ( access_token : string ) => {
-  console.log('Refresh Triggered');
+  
   const res = await fetch(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&&access_token=${access_token}`)
 
   if(!res.ok) return null
@@ -53,7 +54,7 @@ const refreshToken = async ( access_token : string ) => {
 }
 
 const getAccessToken = async () => {
-  console.log('GetToken Triggered');
+  
   const db_data = await prisma.accessToken.findUnique({
     where:{ id:1 }
   })

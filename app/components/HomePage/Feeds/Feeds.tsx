@@ -1,13 +1,11 @@
-"use client";
-
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Btn from '../../Btn/Btn';
 import styles from "./Feeds.module.css";
 import FeedCard from '../../FeedCard/FeedCard';
-import useSWR from 'swr';
-import FeedCardSkeleton from '../../FeedCardSkeleton/FeedCardSkeleton';
+import getAccessToken from '@/utilis/getAccessToken';
+
 
 export interface Feed {
   id: string;
@@ -17,21 +15,21 @@ export interface Feed {
   caption: string;
 }
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const Feeds = async () => {
+  const accessToken = await getAccessToken();
+  if (!accessToken) return null;
 
-const Feeds = () => {
-  const accessToken = process.env.NEXT_PUBLIC_USER_ACCESS_TOKEN;
   const apiVersion = "v18.0";
   const baseUrl = `https://graph.instagram.com/${apiVersion}`;
 
-  const { data, error, isLoading } = useSWR(
-    `${baseUrl}/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${accessToken}`,
-    fetcher
-  );
-  const latestMedia = [0, 1, 2, 3];
-  let feeds: Feed[] = [];
+  const res = await fetch(`${baseUrl}/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${accessToken}`);
 
-  if (!isLoading && !error) feeds = data["data"];
+  if (!res.ok) return null;
+
+  const data = await res.json();
+
+  const latestMedia = [0, 1, 2, 3];
+  let feeds: Feed[] = data["data"];
 
   return (
     <section id="feeds" className={styles.section}>
@@ -53,13 +51,10 @@ const Feeds = () => {
       <div className={styles.feedsContainer}>
         {latestMedia.map((media) =>
         (
-          isLoading || error ? (
-            <FeedCardSkeleton key={media} error={error} isLoading={isLoading} />
-          ) :
-            (<FeedCard
-              key={media}
-              feed={feeds[media]}
-            ></FeedCard>)
+          <FeedCard
+            key={media}
+            feed={feeds[media]}
+          ></FeedCard>
         )
         )}
       </div>
