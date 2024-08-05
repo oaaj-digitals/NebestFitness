@@ -29,6 +29,8 @@ const Feeds = async () => {
 
   const data = await res.json();
 
+  if (!data['data']) return null;
+
   const latestMedia = [0, 1, 2, 3];
   let feeds: Feed[] = data["data"];
 

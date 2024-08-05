@@ -14,9 +14,9 @@ datasource db {
 }
 
 model AccessToken {
-  id          Int    @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   accesstoken String
   token_type  String
-  expires_in  Int
-  modified_at BigInt
+  expires_in  DateTime
+  modified_at DateTime @default(now())
 }

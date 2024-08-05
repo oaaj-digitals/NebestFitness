@@ -10,32 +10,30 @@ interface DbSchema extends APIResponse {
   modified_at?:number,
 }
 
-const renewable =(modified_at:any,expires_in:number) =>{
+const checkValidity =(expires_in:number) =>{
   
   const today = new Date()
   const todayInNum = today.getTime()
   let isValid = false; 
 
-  const renew_time = expires_in + parseInt(modified_at) - 604800000
-
-
-  if (renew_time > todayInNum) isValid = true;
+  const renew_time = expires_in - 604800000
   
+
+  if (renew_time > todayInNum ) isValid = true;
   return isValid;
 }
 
 const storeNewToken = async (data:APIResponse) => {
-  
-  const today = new Date();
-  const todayInNum = today.getTime()
+
+  const expire_date = ((data.expires_in * 1000) + Date.now());
 
   const updateToken = await prisma.accessToken.update({
     where:{ id : 1, },
     data:{
       accesstoken: data.access_token,
-      expires_in: data.expires_in,
+      expires_in: new Date(expire_date),
       token_type: data.token_type,
-      modified_at: todayInNum,
+      modified_at: new Date(Date.now()),
     }
   })
 
@@ -48,9 +46,9 @@ const refreshToken = async ( access_token : string ) => {
   
   const res = await fetch(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&&access_token=${access_token}`)
 
-  if(!res.ok) return null
+  if(!res.ok) return null;
 
-  return await res.json()
+  return await res.json();
 }
 
 const getAccessToken = async () => {
@@ -60,14 +58,13 @@ const getAccessToken = async () => {
   })
   if (!db_data) return null;
 
-  const isValid = renewable(db_data.modified_at, db_data.expires_in);
-
-  if(!isValid) return db_data.accesstoken
+  const isValid = checkValidity(db_data.expires_in.getTime());
+  if(isValid) return db_data.accesstoken
 
   const new_data : APIResponse = await refreshToken(db_data.accesstoken);
   if (!new_data) return null;
     
-  const stored = storeNewToken(new_data);
+  const stored = await storeNewToken(new_data);
   if(!stored) return null;
 
   return new_data.access_token;
