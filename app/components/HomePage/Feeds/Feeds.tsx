@@ -19,8 +19,9 @@ const Feeds = async () => {
   const accessToken = await getAccessToken();
   if (!accessToken) return null;
 
-  const apiVersion = "v18.0";
+  const apiVersion = "v21.0";
   const baseUrl = `https://graph.instagram.com/${apiVersion}`;
+
 
   const res = await fetch(`${baseUrl}/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${accessToken}`,
     { next: { revalidate: 1800 } });
