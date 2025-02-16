@@ -1,5 +1,5 @@
-import services from "@/app/utilis/services";
-import ServicePageContent from "@/app/components/ServicePage/ServicePage";
+import services from "../../../utilis/services";
+import ServicePageContent from "../../../components/ServicePage/ServicePage";
 
 interface Props {
   params: { title: string; };
