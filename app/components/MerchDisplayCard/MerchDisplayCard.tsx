@@ -4,27 +4,29 @@ import hoodie from "../../assets/images/Nebestfitness Premium Hoodie.png";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Merch } from "@/app/utilis/merch";
 
-interface Props {
-  img?: string | StaticImageData;
-  alt?: string;
-  price?: number;
-  genders?: string;
+interface Props extends Merch {
 }
 
-const MerchDisplayCard = ({ img, alt }: Props) => {
+const MerchDisplayCard = (
+  { displayimg, title, price, gender }: Props
+) => {
+
+  const generatedLink = title.toLowerCase().replace(/\s/g, "_");
+
   return (
     <div className={styles.card}>
       <div className={`${styles.imgBox}`}>
         <Image
           className={`${styles.img}`}
-          src={img || hoodie}
-          alt={alt ? alt : ""}
+          src={displayimg || hoodie}
+          alt={`NebestFitness ${title?.toUpperCase}`}
         />
       </div>
 
       <div className={styles.linkContainer}>
-        <Link href={"./premium-hoodie"} className={`${styles.link}`}>
+        <Link href={`/shop/${generatedLink}`} className={`${styles.link}`}>
           <div className={styles.linkDiv}>
             <FontAwesomeIcon icon={faArrowRight} className={`${styles.linkIcon}`} />
           </div>
@@ -33,11 +35,11 @@ const MerchDisplayCard = ({ img, alt }: Props) => {
 
       <div className={styles.textDetails}>
 
-        <h2 className={styles.title}>Premium Hoodie</h2>
+        <h2 className={styles.title}>{title}</h2>
 
         <div className={styles.right}>
-          <p className={styles.gender}>Unisex</p>
-          <p className={styles.price}>£45.00</p>
+          <p className={styles.gender}>{gender}</p>
+          <p className={styles.price}>£{price.toFixed(2)}</p>
         </div>
       </div>
     </div>
