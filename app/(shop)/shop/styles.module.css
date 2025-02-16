@@ -11,6 +11,8 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   row-gap: 8rem;
   column-gap: 4vw;
+  align-content: stretch;
+  overflow: hidden;
 }
 
 @media (max-width: 37.5em) {
