@@ -71,12 +71,12 @@ const Header = () => {
           </Link>
           <Link
             className={styles.navLink}
-            href="/#gallery"
+            href="/shop"
             onClick={() => {
               handleMenuOpen(isMenuOpen);
             }}
           >
-            Gallery
+            Shop
           </Link>
           <Link
             className={styles.navLink}

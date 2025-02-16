@@ -1,0 +1,25 @@
+.main {
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  background-color: var(--color-dark-gray) !important;
+}
+
+.section {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 8rem;
+  column-gap: 4vw;
+}
+
+@media (max-width: 37.5em) {
+  .section {
+    width: 100%;
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 8rem;
+    column-gap: 4vw;
+  }
+}
