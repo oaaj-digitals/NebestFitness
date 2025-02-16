@@ -1,0 +1,95 @@
+.card {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imgBox {
+  width: 100%;
+  background-color: var(--color-offwhite);
+  clip-path: polygon(0 0, 90% 0%, 100% 10%, 100% 100%, 10% 100%, 0 90%);
+}
+
+.textDetails {
+  padding-left: 10%;
+
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.title,
+.price {
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender {
+  color: #a1a1a1;
+  font-size: 1.4rem;
+}
+
+.linkContainer {
+  width: fit-content;
+  height: 0;
+  position: relative;
+  left: 78%;
+  bottom: 3rem;
+}
+
+.link {
+  width: 4rem;
+  height: 4rem;
+
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 20% 100%, 0 80%);
+
+  /* position: absolute;
+  left: 75%;
+  top: 70%; */
+}
+
+.link:hover {
+  color: var(--color-red) !important;
+  background-color: var(--color-black);
+  scale: 1.05;
+}
+
+.link,
+.linkDiv {
+  transition: all .15s ease-in-out;
+}
+
+.linkDiv {
+  width: 85%;
+  height: 85%;
+  background-color: var(--color-black);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 20% 100%, 0 80%);
+}
+
+.link:hover .linkDiv {
+  scale: .95;
+  background-color: var(--color-offwhite);
+}
+
+
+.linkIcon {
+
+  transform: rotate(-45deg);
+}
