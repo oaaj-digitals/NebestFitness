@@ -11,7 +11,7 @@ export default function ShopLayout({
   return (
     <html lang="en">
       <GoogleAnayticsScript />
-      <body className={`${oxanium.variable}`}>
+      <body className={`${oxanium.variable}`} style={{ backgroundColor: "var(--color-dark-gray)" }}>
         <Header />
         {children}
       </body>
