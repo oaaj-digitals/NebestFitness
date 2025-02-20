@@ -1,6 +1,5 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import styles from "./MerchDisplayCard.module.css";
-import hoodie from "../../assets/images/Nebestfitness Premium Hoodie.png";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +19,7 @@ const MerchDisplayCard = (
       <div className={`${styles.imgBox}`}>
         <Image
           className={`${styles.img}`}
-          src={displayimg || hoodie}
+          src={displayimg}
           alt={`NebestFitness ${title?.toUpperCase}`}
         />
       </div>
