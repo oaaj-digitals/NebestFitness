@@ -12,7 +12,7 @@ const MerchDisplayCard = (
   { displayimg, title, price, gender }: Props
 ) => {
 
-  const generatedLink = title.toLowerCase().replace(/\s/g, "_");
+  const generatedLink = title!.toLowerCase().replace(/\s/g, "_");
 
   return (
     <div className={styles.card}>
@@ -38,7 +38,7 @@ const MerchDisplayCard = (
 
         <div className={styles.right}>
           <p className={styles.gender}>{gender}</p>
-          <p className={styles.price}>£{price.toFixed(2)}</p>
+          <p className={styles.price}>£{price!.toFixed(2)}</p>
         </div>
       </div>
     </div>

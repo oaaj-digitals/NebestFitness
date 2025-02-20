@@ -7,7 +7,7 @@ interface Props {
 
 export async function generateStaticParams() {
 
-  const merchsTitle = merchs.map((merch) => merch["title"].toLowerCase().replace(/\s/g, "_"));
+  const merchsTitle = merchs.map((merch) => merch["title"]!.toLowerCase().replace(/\s/g, "_"));
 
   return merchsTitle.map((title) => ({ title: title }));
 }
@@ -32,7 +32,7 @@ const generateRelated = (currIndex: number, all: Merch[]) => {
       }
 
       const merchImg = merchs[newNumber].displayimg;
-      const merchtitle = merchs[newNumber].title;
+      const merchtitle = merchs[newNumber].title!;
       const merchLink = merchtitle.toLowerCase().replace(/\s/g, "_");
 
       related = [...related, { link: merchLink, img: merchImg }];
@@ -55,7 +55,7 @@ const MerchDetailPage = ({ params: { title } }: Props) => {
 
     merchs.map(
       (merch, index) => (
-        merch.title.toLocaleLowerCase().replace(/\s/g, "_") ==
+        merch.title!.toLocaleLowerCase().replace(/\s/g, "_") ==
           title ?
           <MerchPageContent key={index} merch={merch} related={generateRelated((index), allMerchs)} /> : null
       )

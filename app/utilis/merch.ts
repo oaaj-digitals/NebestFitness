@@ -18,9 +18,9 @@ import FaceCapSide from "../assets/images/merchs/NebestFitness_Face_Cap_Side.png
 export interface Merch {
   displayimg: string | StaticImageData;
   imgs?: string[] | StaticImageData[];
-  price: number;
+  price?: number;
   gender?: string;
-  title: string;
+  title?: string;
   description?:string;
   availableSizes?:string | string[];
 }
@@ -45,10 +45,10 @@ const merchs : Merch[]=[
     availableSizes:["s","m", "l", 'xl'],
   },
     {
-    title: "NebestFitness Face Caps",
+    title: "NebestFitness Face Cap",
     displayimg: FaceCapFront,
     imgs:[FaceCapSide,FaceCapBack],
-    price: 35.00,
+    price: 30.00,
     gender: "Unisex",
     description:"A stylish and functional accessory, our face caps provide shade ad a sporty look for any fitness enthusiast.",
     availableSizes:'One size fits all (adjustable strap)',
