@@ -3,6 +3,7 @@ import styles from "./MerchPage.module.css";
 import Btn from '../Btn/Btn';
 import { Merch } from "@/app/utilis/merch";
 import Link from "next/link";
+import MerchPageImg from "../MerchPageImg/MerchPageImg";
 
 
 
@@ -28,30 +29,7 @@ const MerchPageContent = ({ merch: {
   return (
     <main className={styles.main}>
       <section className={styles.imgSect}>
-        <div className={styles.showcaseImgDiv}>
-          <Image src={displayimg} alt={`NebestFitness ${title}`} className={styles.showcaseImg} />
-        </div>
-
-        <div className={styles.imgIcons}>
-
-          {imgs &&
-            <div className={`${styles.ImgIconDiv} ${styles.active}`}>
-              <Image src={displayimg} alt={'0'} className={styles.imgIcon} />
-            </div>
-          }
-
-          {
-            imgs &&
-            imgs.map(
-              (img, index) => (
-                <div key={index} className={styles.ImgIconDiv}>
-                  <Image src={img} alt={'0'} className={styles.imgIcon} />
-                </div>
-              )
-            )
-          }
-
-        </div>
+        <MerchPageImg displayimg={displayimg} title={title} imgs={imgs} />
 
       </section>
 
@@ -63,7 +41,7 @@ const MerchPageContent = ({ merch: {
 
         <div className={styles.priceBox}>
           <p className={styles.price}> £
-            {price.toFixed(2)}
+            {price!.toFixed(2)}
           </p>
           <p className={styles.caption}>without shipping</p>
         </div>
