@@ -57,7 +57,7 @@ const MerchDetailPage = ({ params: { title } }: Props) => {
       (merch, index) => (
         merch.title.toLocaleLowerCase().replace(/\s/g, "_") ==
           title ?
-          <></> : null
+          <MerchPageContent key={index} merch={merch} related={generateRelated((index), allMerchs)} /> : null
       )
     )
   );
