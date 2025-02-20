@@ -161,6 +161,7 @@
 
 .howTo .desc>a {
   height: auto !important;
+  color: var(--color-red) !important;
 }
 
 @media (max-width: 75em) {
