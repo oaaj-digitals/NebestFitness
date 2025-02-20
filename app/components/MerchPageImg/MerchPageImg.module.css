@@ -113,6 +113,8 @@
 
 .imgContainer {
   height: 100%;
+  width: auto;
+  max-width: 100%;
   cursor: zoom-out;
   background-color: var(--color-white);
 }
@@ -149,12 +151,15 @@
 }
 
 @media (max-width: 56.25em) {
+  .closeBtn {
+    right: 0;
+  }
+}
+
+@media (max-width: 37.5em) {
   .imgContainer {
     width: 100%;
     height: auto !important;
-  }
-
-  .closeBtn {
-    right: 0;
+    max-height: 100%;
   }
 }
