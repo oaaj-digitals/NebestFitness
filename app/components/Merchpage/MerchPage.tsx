@@ -72,12 +72,15 @@ const MerchPageContent = ({ merch: {
           availableSizes &&
           <div className={styles.sizes}>
             {
-              availableSizes.map(
-                (size, index) =>
-                  <p className={styles.size} key={index}>
-                    {size}
-                  </p>
-              )
+              typeof (availableSizes) != 'string' ?
+                availableSizes.map(
+                  (size, index) =>
+                    <p className={styles.size} key={index}>
+                      {size}
+                    </p>
+                ) :
+                <p className={styles.singleSize}>{availableSizes}</p>
+
             }
           </div>
         }

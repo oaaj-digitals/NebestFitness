@@ -153,6 +153,10 @@
   clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 100% 80%, 80% 100%, 0 100%, 0% 20%);
 }
 
+.singleSize {
+  color: var(--color-light-gray);
+}
+
 .others {
   display: flex;
   flex-direction: column;
