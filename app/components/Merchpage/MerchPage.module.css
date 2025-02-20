@@ -56,6 +56,16 @@
   color: var(--color-light-gray);
 }
 
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.titleBox .title {
+  font-size: 2rem;
+}
+
 .sizes {
   display: flex;
   gap: 1rem;
@@ -80,10 +90,6 @@
   font-weight: 600;
 
   text-transform: uppercase;
-}
-
-.size:nth-child(even) {
-  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 100% 80%, 80% 100%, 0 100%, 0% 20%);
 }
 
 .singleSize {
@@ -221,5 +227,17 @@
   .products>.title,
   .howTo>.title {
     font-size: 2.2rem;
+  }
+
+  .products {
+    order: 3;
+  }
+
+  .howTo {
+    order: 1;
+  }
+
+  .ticketLine {
+    order: 2;
   }
 }
