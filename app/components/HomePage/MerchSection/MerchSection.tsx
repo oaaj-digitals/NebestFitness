@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./MerchSection.module.css";
-import hoodiePic from "../../../assets/images/Nebestfitness Premium Hoodie.png";
-import shirt1 from "../../../assets/images/Nebestfitness Shirt 1.png";
+import hoodiePic from "../../../assets/images/merchs/Nebestfitness_Premium_Hoodie_Front.png";
+import shirt1 from "../../../assets/images/merchs/NebestFitness_Legacy_Shirt_Front.png";
+import shirt2 from "../../../assets/images/merchs/Nebestfitness_LightWeight_Shirt_Back.png";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -34,11 +35,11 @@ const MerchSection = () => {
           </div>
 
           <div className={`${styles.imgBox} ${styles.imgBg} ${styles.shirtImg1} ${styles.shirtImg}`}>
-            <Image src={shirt1} alt={"NebestFitness Premium Hoodie"} />
+            <Image src={shirt1} alt={"NebestFitness Legacy Shirt"} />
           </div>
 
           <div className={`${styles.imgBox} ${styles.imgBg} ${styles.shirtImg2} ${styles.shirtImg}`}>
-            <Image src={shirt1} alt={"NebestFitness Premium Hoodie"} />
+            <Image src={shirt2} alt={"NebestFitness LightWeight Shirt"} />
           </div>
         </div>
 
