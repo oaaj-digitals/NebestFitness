@@ -34,7 +34,7 @@ const MerchDisplayCard = (
 
       <div className={styles.textDetails}>
 
-        <h2 className={styles.title}>{title}</h2>
+        <Link className={styles.title} href={`/shop/${generatedLink}`}>{title}</Link>
 
         <div className={styles.right}>
           <p className={styles.gender}>{gender}</p>
