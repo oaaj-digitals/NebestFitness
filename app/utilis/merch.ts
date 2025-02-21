@@ -5,15 +5,14 @@ import premiumHoodieBack from "../assets/images/merchs/Nebestfitness_Premium_Hoo
 import lightweightShirtFront from "../assets/images/merchs/Nebestfitness_LightWeight_Shirt_Front.png";
 import lightweightShirtBack from "../assets/images/merchs/Nebestfitness_LightWeight_Shirt_Back.png";
 
-import BeTheBestShirtFront from "../assets/images/merchs/NebestFitness_Be_the_best_Shirt_Front.png"
-import BeTheBestShirtBack from "../assets/images/merchs/NebestFitness_Be_the_best_Shirt_Back.png"
+import BeTheBestShirtFront from "../assets/images/merchs/NebestFitness_Be_the_best_Shirt_Front.png";
+import BeTheBestShirtBack from "../assets/images/merchs/NebestFitness_Be_the_best_Shirt_Back.png";
 
-import LegacyShirtFront from "../assets/images/merchs/NebestFitness_Legacy_Shirt_Front.png"
-// import LegacyShirtBack from "../assets/images/merchs/"
+import LegacyShirtFront from "../assets/images/merchs/NebestFitness_Legacy_Shirt_Front.png";
 
-import FaceCapFront from "../assets/images/merchs/NebestFitness_Face_Cap_Front.png"
-import FaceCapBack from "../assets/images/merchs/NebestFitness_Face_Cap_Back.png"
-import FaceCapSide from "../assets/images/merchs/NebestFitness_Face_Cap_Side.png"
+import FaceCapFront from "../assets/images/merchs/NebestFitness_Face_Cap_Front.png";
+import FaceCapBack from "../assets/images/merchs/NebestFitness_Face_Cap_Back.png";
+import FaceCapSide from "../assets/images/merchs/NebestFitness_Face_Cap_Side.png";
 
 export interface Merch {
   displayimg: string | StaticImageData;
@@ -27,7 +26,7 @@ export interface Merch {
 
 const merchs : Merch[]=[
   {
-    title: "Premium Hoodie",
+    title: "PrimeFit Hoodie",
     displayimg: premiumHoodieFront,
     imgs:[premiumHoodieBack],
     price: 45.00,
@@ -36,7 +35,7 @@ const merchs : Merch[]=[
     availableSizes:["s","m", "l", 'xl'],
   },
   {
-    title: "Lightweight Shirt",
+    title: "Summit Tee",
     displayimg: lightweightShirtFront,
     imgs:[lightweightShirtBack],
     price: 35.00,
@@ -45,7 +44,7 @@ const merchs : Merch[]=[
     availableSizes:["s","m", "l", 'xl'],
   },
     {
-    title: "NebestFitness Face Cap",
+    title: "EliteFit FaceCap",
     displayimg: FaceCapFront,
     imgs:[FaceCapSide,FaceCapBack],
     price: 30.00,
@@ -54,7 +53,7 @@ const merchs : Merch[]=[
     availableSizes:'One size fits all (adjustable strap)',
   },
   {
-    title: "NebestFitness Legacy Shirt",
+    title: "Pulse Performance Tee",
     displayimg: LegacyShirtFront,
     imgs:[lightweightShirtBack],
     price: 35.00,
@@ -63,7 +62,7 @@ const merchs : Merch[]=[
     availableSizes:["s","m", "l", 'xl'],
   },
   {
-    title: "NebestFitness Be the Best Shirt",
+    title: "Legacy Tee",
     displayimg: BeTheBestShirtFront,
     imgs:[BeTheBestShirtBack],
     price: 35.00,
